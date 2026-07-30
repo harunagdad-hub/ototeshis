@@ -1,36 +1,8 @@
+// Markalar listesi — /brands sayfasında gösterilen üst seviye marka kayıtları.
+// Hangi markanın model/nesil/motor verisi olduğunu görmek için data/models.ts,
+// data/generations.ts ve data/engines.ts dosyalarına bakın.
 export const cars = [
-  {
-    id: "volkswagen",
-    name: "Volkswagen",
-    models: [
-      {
-        id: "golf",
-        name: "Golf",
-        generations: [
-          {
-            id: "mk7",
-            name: "Golf 7",
-            years: "2013-2020",
-            engines: [
-              {
-                id: "16tdi",
-                name: "1.6 TDI",
-                code: "EA288",
-              },
-              {
-                id: "20tdi",
-                name: "2.0 TDI",
-                code: "EA288",
-              },
-              {
-                id: "14tsi",
-                name: "1.4 TSI",
-                code: "EA211",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  { id: "volkswagen", name: "Volkswagen" },
+  { id: "audi", name: "Audi" },
+  { id: "bmw", name: "BMW" },
 ];
