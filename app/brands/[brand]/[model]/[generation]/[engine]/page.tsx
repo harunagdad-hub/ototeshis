@@ -1,4 +1,6 @@
-import { faults } from "@/data/faults";
+import { engines } from "@/data/engines";
+import { faultDatabase } from "@/data/database/faultDatabase";
+import { engineFamilyCandidates } from "@/lib/utils";
 import FaultCard from "@/components/cards/FaultCard";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import PageHeader from "@/components/common/PageHeader";
@@ -15,7 +17,18 @@ type Props = {
 export default async function EnginePage({ params }: Props) {
   const { brand, model, generation, engine } = await params;
 
-  const list = faults[engine as keyof typeof faults] ?? [];
+  const generationEngines =
+    engines[generation as keyof typeof engines] ?? [];
+
+  const engineInfo = generationEngines.find((e) => e.id === engine);
+
+  const candidates = engineInfo
+    ? engineFamilyCandidates(engineInfo.code)
+    : [];
+
+  const list = faultDatabase.filter((fault) =>
+    fault.engineFamilies.some((family) => candidates.includes(family))
+  );
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
@@ -58,7 +71,7 @@ export default async function EnginePage({ params }: Props) {
               <FaultCard
                 key={fault.id}
                 fault={fault}
-                href={`/brands/${brand}/${model}/${generation}/${engine}/${fault.id}`}
+                href={`/faults/${fault.slug}`}
               />
             ))}
           </div>

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Badge from "@/components/ui/Badge";
-import { Fault } from "@/types/fault";
+import { FaultDatabase } from "@/types/faultDatabase";
 
 type Props = {
-  fault: Fault;
+  fault: FaultDatabase;
   href: string;
 };
 
@@ -32,11 +32,11 @@ export default function FaultCard({ fault, href }: Props) {
       </div>
 
       <p className="mt-4 text-neutral-400">
-        {fault.description}
+        {fault.shortDescription}
       </p>
 
       <div className="mt-6 flex flex-wrap gap-2">
-        {fault.obd.map((code) => (
+        {fault.obdCodes.map((code) => (
           <span
             key={code}
             className="rounded-lg bg-neutral-800 px-3 py-1 text-sm"
