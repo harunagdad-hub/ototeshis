@@ -135,4 +135,131 @@ export const engines = {
       years: "2014-2023",
     },
   ],
+
+  "a3-8v": [
+    {
+      id: "16-tdi",
+      name: "1.6 TDI",
+      code: "EA288",
+      fuel: "Dizel",
+      power: "105-116 PS",
+      years: "2012-2020",
+    },
+    {
+      id: "20-tdi",
+      name: "2.0 TDI",
+      code: "EA288",
+      fuel: "Dizel",
+      power: "150-184 PS",
+      years: "2012-2020",
+    },
+    {
+      id: "14-tsi",
+      name: "1.4 TSI",
+      code: "EA211",
+      fuel: "Benzin",
+      power: "125-150 PS",
+      years: "2012-2020",
+    },
+    {
+      id: "20-tsi",
+      name: "2.0 TSI",
+      code: "EA888 Gen3",
+      fuel: "Benzin",
+      power: "180-310 PS",
+      years: "2012-2020",
+    },
+  ],
+
+  "a4-b8": [
+    {
+      id: "20-tdi",
+      name: "2.0 TDI",
+      code: "EA288",
+      fuel: "Dizel",
+      power: "150-190 PS",
+      years: "2012-2015",
+    },
+    {
+      id: "18-tfsi",
+      name: "1.8 TFSI",
+      code: "EA888 Gen3",
+      fuel: "Benzin",
+      power: "170 PS",
+      years: "2012-2015",
+    },
+  ],
+
+  "a4-b9": [
+    {
+      id: "20-tdi",
+      name: "2.0 TDI",
+      code: "EA288 EVO",
+      fuel: "Dizel",
+      power: "150-190 PS",
+      years: "2015-2023",
+    },
+    {
+      id: "20-tfsi",
+      name: "2.0 TFSI",
+      code: "EA888 Gen3",
+      fuel: "Benzin",
+      power: "190-252 PS",
+      years: "2015-2023",
+    },
+  ],
+
+  f30: [
+    {
+      id: "320d",
+      name: "320d",
+      code: "N47",
+      fuel: "Dizel",
+      power: "184 PS",
+      years: "2012-2015",
+    },
+    {
+      id: "320d-b47",
+      name: "320d",
+      code: "B47",
+      fuel: "Dizel",
+      power: "190 PS",
+      years: "2015-2019",
+    },
+    {
+      id: "320i",
+      name: "320i",
+      code: "N20",
+      fuel: "Benzin",
+      power: "184 PS",
+      years: "2012-2015",
+    },
+  ],
+
+  f10: [
+    {
+      id: "520d",
+      name: "520d",
+      code: "N47",
+      fuel: "Dizel",
+      power: "184 PS",
+      years: "2010-2013",
+    },
+    {
+      id: "520d-b47",
+      name: "520d",
+      code: "B47",
+      fuel: "Dizel",
+      power: "190 PS",
+      years: "2013-2017",
+    },
+    {
+      id: "528i",
+      name: "528i",
+      code: "N20",
+      fuel: "Benzin",
+      power: "245 PS",
+      years: "2011-2017",
+    },
+  ],
 };

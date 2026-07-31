@@ -28,6 +28,41 @@ id:"golf-8",
 modelId:"golf",
 name:"Golf VIII",
 years:"2020-"
+},
+
+{
+id:"a3-8v",
+modelId:"a3",
+name:"A3 8V",
+years:"2012-2020"
+},
+
+{
+id:"a4-b8",
+modelId:"a4",
+name:"A4 B8",
+years:"2008-2015"
+},
+
+{
+id:"a4-b9",
+modelId:"a4",
+name:"A4 B9",
+years:"2015-"
+},
+
+{
+id:"f30",
+modelId:"3-serisi",
+name:"3 Serisi F30",
+years:"2012-2019"
+},
+
+{
+id:"f10",
+modelId:"5-serisi",
+name:"5 Serisi F10",
+years:"2010-2017"
 }
 
 ];

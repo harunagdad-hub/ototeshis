@@ -28,6 +28,13 @@ id:"skoda",
 name:"Škoda",
 country:"Czech Republic",
 logo:"/logos/skoda.svg"
+},
+
+{
+id:"bmw",
+name:"BMW",
+country:"Germany",
+logo:"/logos/bmw.svg"
 }
 
 ];

@@ -39,4 +39,41 @@ export const generations = {
       years: "2014-2023",
     },
   ],
+
+  a3: [
+    {
+      id: "a3-8v",
+      name: "A3 8V",
+      years: "2012-2020",
+    },
+  ],
+
+  a4: [
+    {
+      id: "a4-b8",
+      name: "A4 B8",
+      years: "2008-2015",
+    },
+    {
+      id: "a4-b9",
+      name: "A4 B9",
+      years: "2015-...",
+    },
+  ],
+
+  "3-serisi": [
+    {
+      id: "f30",
+      name: "3 Serisi F30",
+      years: "2012-2019",
+    },
+  ],
+
+  "5-serisi": [
+    {
+      id: "f10",
+      name: "5 Serisi F10",
+      years: "2010-2017",
+    },
+  ],
 };

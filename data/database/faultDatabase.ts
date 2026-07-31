@@ -30,6 +30,7 @@ export const faultDatabase: FaultDatabase[] = [
       "Golf",
       "Passat",
       "A3",
+      "A4",
       "Leon",
       "Octavia",
       "Caddy",
@@ -148,6 +149,7 @@ export const faultDatabase: FaultDatabase[] = [
       "Golf",
       "Passat",
       "A3",
+      "A4",
       "Leon",
       "Octavia",
       "Caddy",
@@ -266,6 +268,7 @@ export const faultDatabase: FaultDatabase[] = [
     "Golf",
     "Passat",
     "A3",
+    "A4",
     "Leon",
     "Octavia",
   ],
@@ -376,6 +379,7 @@ export const faultDatabase: FaultDatabase[] = [
     "Golf",
     "Passat",
     "A3",
+    "A4",
     "Leon",
     "Octavia",
   ],
@@ -453,6 +457,311 @@ export const faultDatabase: FaultDatabase[] = [
     "egr",
     "dpf",
     "maf",
+  ],
+},
+
+{
+  id: "timing-chain",
+
+  slug: "n47-zincir-kilavuzu-arizasi",
+
+  title: "Zincir Kılavuzu (Timing Chain) Arızası",
+
+  shortDescription:
+    "Triger zincirinin gerginliğini kaybetmesi veya kılavuzların aşınması sonucu motor ciddi hasar görebilir.",
+
+  category: "Motor",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "n47",
+    "n20",
+  ],
+
+  affectedEngines: [
+    "320d",
+    "520d",
+    "320i",
+    "528i",
+  ],
+
+  affectedModels: [
+    "3 Serisi",
+    "5 Serisi",
+    "1 Serisi",
+    "X1",
+  ],
+
+  obdCodes: [
+    "P0016",
+    "P0017",
+  ],
+
+  symptoms: [
+    "Soğuk startta metalik tıkırtı sesi",
+    "Motor arıza lambası",
+    "Rölantide titreşim",
+    "Ani güç kaybı",
+  ],
+
+  causes: [
+    "Zincir kılavuzlarının plastik aşınması",
+    "Zincir gerdiricisinin zayıflaması",
+    "Düzensiz yağ değişimi",
+  ],
+
+  diagnostics: [
+    "OBD taraması",
+    "Zincir gerginlik kontrolü",
+    "Triger kapağı sökülerek görsel kontrol",
+  ],
+
+  solutions: [
+    "Zincir ve kılavuz setinin komple değişimi",
+    "Gerdiricinin yenilenmesi",
+    "Motor zamanlamasının yeniden ayarlanması",
+  ],
+
+  requiredParts: [
+    "Timing Zinciri",
+    "Zincir Kılavuzları",
+    "Gerdirici",
+  ],
+
+  preventiveMaintenance: [
+    "Yağ değişimlerini asla geciktirme",
+    "Üreticinin önerdiği yağ viskozitesini kullan",
+    "Erken uyarı seslerini ciddiye al",
+  ],
+
+  keywords: [
+    "zincir",
+    "timing chain",
+    "tıkırtı sesi",
+    "n47",
+    "metalik ses",
+  ],
+
+  aliases: [
+    "zincir kılavuzu arızası",
+    "triger zinciri arızası",
+    "n47 zincir sorunu",
+  ],
+
+  priority: 97,
+
+  estimatedCost: {
+    min: 15000,
+    max: 40000,
+    currency: "TRY",
+  },
+
+  repairTime: "6-10 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "vanos",
+  ],
+},
+
+{
+  id: "swirl-flap",
+
+  slug: "emme-manifoldu-kelebek-arizasi",
+
+  title: "Emme Manifoldu Kelebek (Swirl Flap) Arızası",
+
+  shortDescription:
+    "Emme manifoldundaki hava yönlendirme kelebeklerinin kırılıp motor içine düşmesi ciddi hasara yol açabilir.",
+
+  category: "Motor",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "n47",
+    "b47",
+  ],
+
+  affectedEngines: [
+    "320d",
+    "520d",
+  ],
+
+  affectedModels: [
+    "3 Serisi",
+    "5 Serisi",
+    "1 Serisi",
+  ],
+
+  obdCodes: [
+    "P2004",
+    "P2015",
+  ],
+
+  symptoms: [
+    "Rölantide düzensizlik",
+    "Motor arıza lambası",
+    "Çekiş kaybı",
+    "Anormal emme sesi",
+  ],
+
+  causes: [
+    "Plastik kelebeklerin zamanla kırılganlaşması",
+    "Kelebek milinin aşınması",
+    "Yaş ve kilometreye bağlı yorulma",
+  ],
+
+  diagnostics: [
+    "Emme manifoldunun sökülerek kontrolü",
+    "Endoskopla görsel muayene",
+    "Canlı veri kontrolü",
+  ],
+
+  solutions: [
+    "Kelebeksiz (delete) manifold ile değişim",
+    "Orijinal manifold değişimi",
+  ],
+
+  requiredParts: [
+    "Emme Manifoldu",
+    "Contalar",
+  ],
+
+  preventiveMaintenance: [
+    "Belirli kilometrede önleyici manifold değişimi",
+    "Anormal ses/titreşimi ciddiye al",
+  ],
+
+  keywords: [
+    "swirl flap",
+    "kelebek",
+    "emme manifoldu",
+    "n47",
+    "motor içine düşme",
+  ],
+
+  aliases: [
+    "swirl flap arızası",
+    "emme kelebeği kırılması",
+  ],
+
+  priority: 90,
+
+  estimatedCost: {
+    min: 8000,
+    max: 20000,
+    currency: "TRY",
+  },
+
+  repairTime: "3-5 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "timing-chain",
+    "egr",
+  ],
+},
+
+{
+  id: "vanos",
+
+  slug: "vanos-solenoid-arizasi",
+
+  title: "VANOS Solenoid Arızası",
+
+  shortDescription:
+    "Değişken supap zamanlama sisteminin (VANOS) solenoid valfinde oluşan arıza performans kaybına yol açar.",
+
+  category: "Motor",
+
+  severity: "Orta",
+
+  engineFamilies: [
+    "n20",
+    "n47",
+  ],
+
+  affectedEngines: [
+    "320i",
+    "528i",
+  ],
+
+  affectedModels: [
+    "3 Serisi",
+    "5 Serisi",
+    "1 Serisi",
+  ],
+
+  obdCodes: [
+    "P0011",
+    "P0021",
+  ],
+
+  symptoms: [
+    "Rölantide düşük tork hissi",
+    "Motor arıza lambası",
+    "Çalışırken sarsıntı",
+    "Devir yükselirken gecikme",
+  ],
+
+  causes: [
+    "VANOS solenoid filtresinin tıkanması",
+    "Solenoid contalarının aşınması",
+    "Düşük yağ kalitesi/seviyesi",
+  ],
+
+  diagnostics: [
+    "OBD taraması",
+    "VANOS test modu ile kontrol",
+    "Yağ basıncı testi",
+  ],
+
+  solutions: [
+    "VANOS solenoid temizliği",
+    "Solenoid ve conta değişimi",
+    "Yağ ve filtre değişimi",
+  ],
+
+  requiredParts: [
+    "VANOS Solenoidi",
+    "Contalar",
+  ],
+
+  preventiveMaintenance: [
+    "Düzenli yağ değişimi",
+    "Kaliteli motor yağı kullan",
+  ],
+
+  keywords: [
+    "vanos",
+    "supap zamanlama",
+    "solenoid",
+    "tork kaybı",
+  ],
+
+  aliases: [
+    "vanos arızası",
+    "vanos solenoid hatası",
+  ],
+
+  priority: 85,
+
+  estimatedCost: {
+    min: 4000,
+    max: 12000,
+    currency: "TRY",
+  },
+
+  repairTime: "2-4 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "timing-chain",
   ],
 }
 

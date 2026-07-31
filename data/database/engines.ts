@@ -5,7 +5,7 @@ export const engines: Engine[] = [
 {
 id:"ea288-16tdi-110",
 
-family:"EA288",
+family:"ea288",
 
 name:"1.6 TDI 110 HP",
 
@@ -28,7 +28,7 @@ years:"2013-2020"
 {
 id:"ea288-20tdi-150",
 
-family:"EA288",
+family:"ea288",
 
 name:"2.0 TDI 150 HP",
 
@@ -45,6 +45,75 @@ power:[150],
 torque:[340],
 
 years:"2013-2020"
+
+},
+
+{
+id:"n47-320d",
+
+family:"n47",
+
+name:"320d",
+
+fuel:"Diesel",
+
+displacement:1995,
+
+cylinders:4,
+
+turbo:true,
+
+power:[184],
+
+torque:[380],
+
+years:"2012-2015"
+
+},
+
+{
+id:"b47-320d",
+
+family:"b47",
+
+name:"320d",
+
+fuel:"Diesel",
+
+displacement:1995,
+
+cylinders:4,
+
+turbo:true,
+
+power:[190],
+
+torque:[400],
+
+years:"2015-2019"
+
+},
+
+{
+id:"n20-320i",
+
+family:"n20",
+
+name:"320i",
+
+fuel:"Petrol",
+
+displacement:1997,
+
+cylinders:4,
+
+turbo:true,
+
+power:[184],
+
+torque:[270],
+
+years:"2012-2015"
 
 }
 

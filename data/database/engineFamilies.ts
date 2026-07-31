@@ -87,6 +87,67 @@ commonFaults:[
 "carbon-build-up"
 ]
 
+},
+
+{
+id:"n47",
+
+name:"N47",
+
+manufacturer:"BMW",
+
+fuel:"Dizel",
+
+years:"2007-2015",
+
+description:"BMW'nin yaygın kullanılan dört silindirli common rail dizel motor ailesi.",
+
+commonFaults:[
+"timing-chain",
+"swirl-flap"
+]
+
+},
+
+{
+id:"b47",
+
+name:"B47",
+
+manufacturer:"BMW",
+
+fuel:"Dizel",
+
+years:"2014-",
+
+description:"N47'nin yerini alan yeni nesil modüler dizel motor ailesi.",
+
+commonFaults:[
+"swirl-flap",
+"egr",
+"dpf"
+]
+
+},
+
+{
+id:"n20",
+
+name:"N20",
+
+manufacturer:"BMW",
+
+fuel:"Benzin",
+
+years:"2011-2017",
+
+description:"Turbo benzinli dört silindirli motor ailesi.",
+
+commonFaults:[
+"vanos",
+"timing-chain"
+]
+
 }
 
 ];
