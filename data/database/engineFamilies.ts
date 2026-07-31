@@ -148,6 +148,28 @@ commonFaults:[
 "timing-chain"
 ]
 
+},
+
+{
+id:"k9k",
+
+name:"K9K",
+
+manufacturer:"Renault-Nissan Alliance",
+
+fuel:"Dizel",
+
+years:"2001-",
+
+description:"Renault, Nissan ve Dacia modellerinde yaygın kullanılan 1.5 litrelik common rail dizel motor ailesi.",
+
+commonFaults:[
+"injector",
+"egr",
+"dpf",
+"turbo"
+]
+
 }
 
 ];

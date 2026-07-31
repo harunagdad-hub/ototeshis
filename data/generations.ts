@@ -76,4 +76,30 @@ export const generations = {
       years: "2010-2017",
     },
   ],
+
+  clio: [
+    {
+      id: "clio-4",
+      name: "Clio IV",
+      years: "2012-2019",
+    },
+    {
+      id: "clio-5",
+      name: "Clio V",
+      years: "2019-...",
+    },
+  ],
+
+  megane: [
+    {
+      id: "megane-3",
+      name: "Megane III",
+      years: "2008-2016",
+    },
+    {
+      id: "megane-4",
+      name: "Megane IV",
+      years: "2016-2022",
+    },
+  ],
 };

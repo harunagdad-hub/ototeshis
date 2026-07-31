@@ -262,4 +262,72 @@ export const engines = {
       years: "2011-2017",
     },
   ],
+
+  "clio-4": [
+    {
+      id: "15-dci-90",
+      name: "1.5 dCi 90",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "90 PS",
+      years: "2012-2019",
+    },
+    {
+      id: "15-dci-110",
+      name: "1.5 dCi 110",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "110 PS",
+      years: "2012-2019",
+    },
+  ],
+
+  "clio-5": [
+    {
+      id: "15-blue-dci-95",
+      name: "1.5 Blue dCi 95",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "95 PS",
+      years: "2019-2023",
+    },
+    {
+      id: "15-blue-dci-115",
+      name: "1.5 Blue dCi 115",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "115 PS",
+      years: "2019-2023",
+    },
+  ],
+
+  "megane-3": [
+    {
+      id: "15-dci-90",
+      name: "1.5 dCi 90",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "90 PS",
+      years: "2008-2016",
+    },
+    {
+      id: "15-dci-110",
+      name: "1.5 dCi 110",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "110-130 PS",
+      years: "2008-2016",
+    },
+  ],
+
+  "megane-4": [
+    {
+      id: "15-dci-90",
+      name: "1.5 dCi 90",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "90-115 PS",
+      years: "2016-2022",
+    },
+  ],
 };

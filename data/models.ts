@@ -47,4 +47,15 @@ export const models = {
       name: "5 Serisi",
     },
   ],
+
+  renault: [
+    {
+      id: "clio",
+      name: "Clio",
+    },
+    {
+      id: "megane",
+      name: "Megane",
+    },
+  ],
 };

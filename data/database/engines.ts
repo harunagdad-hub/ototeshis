@@ -115,6 +115,52 @@ torque:[270],
 
 years:"2012-2015"
 
+},
+
+{
+id:"k9k-15dci-90",
+
+family:"k9k",
+
+name:"1.5 dCi 90 HP",
+
+fuel:"Diesel",
+
+displacement:1461,
+
+cylinders:4,
+
+turbo:true,
+
+power:[90],
+
+torque:[220],
+
+years:"2012-2023"
+
+},
+
+{
+id:"k9k-15dci-110",
+
+family:"k9k",
+
+name:"1.5 dCi 110 HP",
+
+fuel:"Diesel",
+
+displacement:1461,
+
+cylinders:4,
+
+turbo:true,
+
+power:[110],
+
+torque:[260],
+
+years:"2012-2023"
+
 }
 
 ];

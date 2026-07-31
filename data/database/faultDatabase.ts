@@ -19,11 +19,13 @@ export const faultDatabase: FaultDatabase[] = [
       "ea288",
       "ea189",
       "ea188",
+      "k9k",
     ],
 
     affectedEngines: [
       "1.6 TDI",
       "2.0 TDI",
+      "1.5 dCi",
     ],
 
     affectedModels: [
@@ -34,6 +36,8 @@ export const faultDatabase: FaultDatabase[] = [
       "Leon",
       "Octavia",
       "Caddy",
+      "Clio",
+      "Megane",
     ],
 
     obdCodes: [
@@ -138,11 +142,13 @@ export const faultDatabase: FaultDatabase[] = [
       "ea288",
       "ea189",
       "ea188",
+      "k9k",
     ],
 
     affectedEngines: [
       "1.6 TDI",
       "2.0 TDI",
+      "1.5 dCi",
     ],
 
     affectedModels: [
@@ -153,6 +159,8 @@ export const faultDatabase: FaultDatabase[] = [
       "Leon",
       "Octavia",
       "Caddy",
+      "Clio",
+      "Megane",
     ],
 
     obdCodes: [
@@ -366,6 +374,7 @@ export const faultDatabase: FaultDatabase[] = [
     "ea189",
     "ea211",
     "ea888",
+    "k9k",
   ],
 
   affectedEngines: [
@@ -373,6 +382,7 @@ export const faultDatabase: FaultDatabase[] = [
     "2.0 TDI",
     "1.4 TSI",
     "2.0 TSI",
+    "1.5 dCi",
   ],
 
   affectedModels: [
@@ -382,6 +392,8 @@ export const faultDatabase: FaultDatabase[] = [
     "A4",
     "Leon",
     "Octavia",
+    "Clio",
+    "Megane",
   ],
 
   obdCodes: [
@@ -762,6 +774,116 @@ export const faultDatabase: FaultDatabase[] = [
 
   relatedFaults: [
     "timing-chain",
+  ],
+},
+
+{
+  id: "injector",
+
+  slug: "k9k-enjektor-arizasi",
+
+  title: "Enjektör Arızası (K9K 1.5 dCi)",
+
+  shortDescription:
+    "Yakıt enjektörlerinin aşınması veya tıkanması sonucu motor düzensiz çalışır ve güç kaybı yaşanır.",
+
+  category: "Yakıt",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "k9k",
+  ],
+
+  affectedEngines: [
+    "1.5 dCi",
+  ],
+
+  affectedModels: [
+    "Clio",
+    "Megane",
+    "Captur",
+    "Duster",
+  ],
+
+  obdCodes: [
+    "P0201",
+    "P0263",
+    "P0266",
+  ],
+
+  symptoms: [
+    "Soğuk startta zor çalışma",
+    "Rölantide titreşim ve düzensizlik",
+    "Egzozdan beyaz/siyah duman",
+    "Motor arıza lambası",
+    "Yakıt tüketiminde belirgin artış",
+  ],
+
+  causes: [
+    "Düşük kaliteli yakıt kullanımı",
+    "Enjektör iğnesinin aşınması",
+    "Enjektör contalarının sertleşmesi",
+    "Yüksek kilometreye bağlı yorulma",
+  ],
+
+  diagnostics: [
+    "OBD taraması",
+    "Enjektör geri dönüş debisi testi",
+    "Silindir denge testi",
+    "Enjektör direnç ölçümü",
+  ],
+
+  solutions: [
+    "Enjektör temizliği (ultrasonik)",
+    "Arızalı enjektörün değişimi",
+    "Enjektör contalarının yenilenmesi",
+    "Yakıt filtresinin değişimi",
+  ],
+
+  requiredParts: [
+    "Enjektör",
+    "Enjektör Contası",
+    "Yakıt Filtresi",
+  ],
+
+  preventiveMaintenance: [
+    "Güvenilir istasyonlardan yakıt al",
+    "Yakıt filtresini zamanında değiştir",
+    "Depoyu sık sık iyice boşaltma",
+  ],
+
+  keywords: [
+    "enjektör",
+    "injector",
+    "k9k",
+    "dci",
+    "beyaz duman",
+    "güç kaybı",
+    "titreşim",
+  ],
+
+  aliases: [
+    "enjektör arızası",
+    "yakıt enjektörü hatası",
+    "dci enjektör sorunu",
+  ],
+
+  priority: 92,
+
+  estimatedCost: {
+    min: 3500,
+    max: 15000,
+    currency: "TRY",
+  },
+
+  repairTime: "2-4 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "egr",
+    "turbo",
   ],
 }
 

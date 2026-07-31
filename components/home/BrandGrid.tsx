@@ -8,7 +8,6 @@ const upcoming = [
   "Mercedes-Benz",
   "Toyota",
   "Ford",
-  "Renault",
   "Peugeot",
   "Opel",
   "Hyundai",

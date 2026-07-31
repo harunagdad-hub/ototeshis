@@ -70,6 +70,20 @@ id:"5-serisi",
 manufacturerId:"bmw",
 name:"5 Serisi",
 segment:"D"
+},
+
+{
+id:"clio",
+manufacturerId:"renault",
+name:"Clio",
+segment:"B"
+},
+
+{
+id:"megane",
+manufacturerId:"renault",
+name:"Megane",
+segment:"C"
 }
 
 ];

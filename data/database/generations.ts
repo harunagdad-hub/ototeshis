@@ -63,6 +63,34 @@ id:"f10",
 modelId:"5-serisi",
 name:"5 Serisi F10",
 years:"2010-2017"
+},
+
+{
+id:"clio-4",
+modelId:"clio",
+name:"Clio IV",
+years:"2012-2019"
+},
+
+{
+id:"clio-5",
+modelId:"clio",
+name:"Clio V",
+years:"2019-"
+},
+
+{
+id:"megane-3",
+modelId:"megane",
+name:"Megane III",
+years:"2008-2016"
+},
+
+{
+id:"megane-4",
+modelId:"megane",
+name:"Megane IV",
+years:"2016-2022"
 }
 
 ];

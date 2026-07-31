@@ -35,6 +35,13 @@ id:"bmw",
 name:"BMW",
 country:"Germany",
 logo:"/logos/bmw.svg"
+},
+
+{
+id:"renault",
+name:"Renault",
+country:"France",
+logo:"/logos/renault.svg"
 }
 
 ];
