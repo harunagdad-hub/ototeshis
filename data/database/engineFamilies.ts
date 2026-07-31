@@ -1,92 +1,40 @@
-import { EngineFamily } from "@/types/engineFamily";
-
-export const engineFamilies: EngineFamily[] = [
-
-{
-id:"ea111",
-
-name:"EA111",
-
-manufacturer:"Volkswagen Group",
-
-fuel:"Benzin",
-
-years:"2005-2015",
-
-description:"TSI motor ailesi.",
-
-commonFaults:[
-"timing-chain",
-"coil",
-"water-pump"
-]
-
-},
-
-{
-id:"ea211",
-
-name:"EA211",
-
-manufacturer:"Volkswagen Group",
-
-fuel:"Benzin",
-
-years:"2012-",
-
-description:"Yeni nesil TSI motor ailesi.",
-
-commonFaults:[
-"wastegate",
-"water-pump",
-"thermostat"
-]
-
-},
-
-{
-id:"ea288",
-
-name:"EA288",
-
-manufacturer:"Volkswagen Group",
-
-fuel:"Dizel",
-
-years:"2012-",
-
-description:"Common Rail dizel motor ailesi.",
-
-commonFaults:[
-"egr",
-"dpf",
-"turbo",
-"adblue",
-"maf"
-]
-
-},
-
-{
-id:"ea888-gen3",
-
-name:"EA888 Gen3",
-
-manufacturer:"Volkswagen Group",
-
-fuel:"Benzin",
-
-years:"2013-",
-
-description:"GTI ve R modellerinde kullanılan motor.",
-
-commonFaults:[
-"oil-consumption",
-"water-pump",
-"pcv",
-"carbon-build-up"
-]
-
+export interface EngineFamily {
+  id: string;
+  name: string;
+  title?: string;
+  code?: string;
+  brand: string;
+  description?: string;
+  [key: string]: any;
 }
 
+export const engineFamilies: EngineFamily[] = [
+  {
+    id: 'PSA_12_PURETECH',
+    name: '1.2 PureTech',
+    title: '1.2 PureTech',
+    brand: 'PEUGEOT',
+    description: 'PSA Grubu 1.2 litrelik 3 silindirli benzinli motor ailesi.'
+  },
+  {
+    id: 'FIAT_13_MULTIJET',
+    name: '1.3 MultiJet',
+    title: '1.3 MultiJet',
+    brand: 'FIAT',
+    description: 'Fiat Grubu 1.3 litrelik turbo dizel motor ailesi.'
+  },
+  {
+    id: 'RENAULT_15_DCI',
+    name: '1.5 dCi',
+    title: '1.5 dCi',
+    brand: 'RENAULT',
+    description: 'Renault Grubu 1.5 litrelik dCi dizel motor ailesi.'
+  },
+  {
+    id: 'PSA_15_BLUEHDI',
+    name: '1.5 BlueHDi',
+    title: '1.5 BlueHDi',
+    brand: 'CITROEN',
+    description: 'PSA Grubu 1.5 litrelik BlueHDi dizel motor ailesi.'
+  }
 ];

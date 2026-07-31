@@ -1,153 +1,95 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import { Search, CarFront, Wrench, Cpu } from "lucide-react";
-import { searchDatabase } from "@/lib/search";
+import React, { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { searchFaults } from '@/lib/search';
+import { FaultDatabase } from '@/data/database/faultDatabase';
 
-export default function SearchPage() {
-  const [query, setQuery] = useState("");
+function SearchContent() {
+  const searchParams = useSearchParams();
+  const queryParam = searchParams.get('q') || '';
+  const [query, setQuery] = useState(queryParam);
+  const [results, setResults] = useState<FaultDatabase[]>([]);
 
-  const filtered = searchDatabase(query);
+  useEffect(() => {
+    setQuery(queryParam);
+    if (queryParam) {
+      const res = searchFaults(queryParam);
+      setResults(res);
+    } else {
+      setResults([]);
+    }
+  }, [queryParam]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+    }
+  };
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-white">
-      <div className="mx-auto max-w-6xl px-6 py-12">
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-3xl font-bold mb-6">Arama Sonuçları</h1>
 
-        {/* Başlık */}
-        <div className="text-center">
-          <h1 className="text-5xl font-black md:text-6xl">
-            Akıllı <span className="text-orange-500">Arama</span>
-          </h1>
+      <form onSubmit={handleSearch} className="mb-8 flex gap-2">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Arıza veya kod ara (ör. Titreme, P0300)..."
+          className="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        >
+          Ara
+        </button>
+      </form>
 
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-neutral-400">
-            Marka, model, motor ailesi, OBD-II hata kodu veya kronik arıza adı ile arama yapın.
-          </p>
-        </div>
+      {queryParam && (
+        <p className="text-sm text-gray-500 mb-6">
+          &quot;{queryParam}&quot; araması için {results.length} sonuç bulundu.
+        </p>
+      )}
 
-        {/* Arama Kutusu */}
-        <div className="mt-10 rounded-3xl border border-white/10 bg-neutral-900/70 p-4 backdrop-blur-xl shadow-2xl">
-          <div className="flex flex-col gap-4 md:flex-row">
-
-            <div className="relative flex-1">
-              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-neutral-500" />
-
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Golf 7, EA288, P0401, EGR, Turbo..."
-                className="h-14 w-full rounded-2xl border border-white/10 bg-black/40 pl-12 pr-4 text-white outline-none transition focus:border-orange-500"
-              />
-            </div>
-
-            <button className="h-14 rounded-2xl bg-orange-500 px-8 font-semibold text-white transition hover:bg-orange-600">
-              Ara
-            </button>
-
+      <div className="space-y-4">
+        {results.map((fault) => (
+          <div key={fault.slug} className="p-5 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <span className="text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded font-medium mb-2 inline-block">
+              {fault.category}
+            </span>
+            <h2 className="text-xl font-bold text-gray-900 mb-1">
+              <Link href={`/faults/${fault.slug}`} className="hover:underline">
+                {fault.title}
+              </Link>
+            </h2>
+            <p className="text-gray-600 text-sm mb-3">{fault.shortDescription}</p>
+            <Link
+              href={`/faults/${fault.slug}`}
+              className="text-sm font-medium text-blue-600 hover:underline"
+            >
+              Detayları İncele →
+            </Link>
           </div>
+        ))}
 
-          {/* Popüler Aramalar */}
-          <div className="mt-4 flex flex-wrap gap-2">
-            {["Golf 7", "EA288", "P0401", "EGR", "Turbo"].map((item) => (
-              <button
-                key={item}
-                onClick={() => setQuery(item)}
-                className="rounded-full border border-white/10 px-4 py-2 text-sm text-neutral-300 transition hover:border-orange-500 hover:text-orange-400"
-              >
-                {item}
-              </button>
-            ))}
+        {queryParam && results.length === 0 && (
+          <div className="p-8 text-center text-gray-500 bg-gray-50 rounded-lg border border-gray-200">
+            Aramanızla eşleşen herhangi bir arıza kaydı bulunamadı.
           </div>
-        </div>
-
-        {/* İstatistikler */}
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-
-          <Stat icon={<CarFront className="h-5 w-5" />} value="25+" label="Marka" />
-
-          <Stat icon={<CarFront className="h-5 w-5" />} value="300+" label="Model" />
-
-          <Stat icon={<Wrench className="h-5 w-5" />} value="8.000+" label="Arıza" />
-
-          <Stat icon={<Cpu className="h-5 w-5" />} value="2.500+" label="OBD Kodu" />
-
-        </div>
-
-        {/* Sonuçlar */}
-        <div className="mt-12">
-
-          {query.length === 0 ? (
-            <div className="rounded-3xl border border-dashed border-white/10 bg-neutral-900/40 p-10 text-center text-neutral-500">
-              Aramaya başlamak için yukarıdaki kutuya bir marka, model, motor veya OBD kodu yazın.
-            </div>
-          ) : (
-            <div className="space-y-4">
-
-              {filtered.map((item) => (
-                <Link
-                  key={`${item.type}-${item.id}`}
-                  href={item.href}
-                  className="group block rounded-2xl border border-white/10 bg-neutral-900 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:bg-neutral-800"
-                >
-
-                  <div className="flex items-start justify-between gap-4">
-
-                    <div>
-                      <h2 className="text-xl font-bold group-hover:text-orange-400">
-                        {item.title}
-                      </h2>
-
-                      <p className="mt-2 text-neutral-400">
-                        {item.subtitle}
-                      </p>
-                    </div>
-
-                    <span className="rounded-full bg-orange-500/20 px-3 py-1 text-xs font-semibold text-orange-300">
-                      {item.type}
-                    </span>
-
-                  </div>
-
-                </Link>
-              ))}
-
-              {filtered.length === 0 && (
-                <div className="rounded-2xl border border-white/10 bg-neutral-900 p-8 text-center text-neutral-500">
-                  <p className="text-lg">Sonuç bulunamadı.</p>
-                  <p className="mt-2 text-sm">
-                    Farklı bir marka, motor ailesi veya OBD kodu deneyin.
-                  </p>
-                </div>
-              )}
-
-            </div>
-          )}
-
-        </div>
-
+        )}
       </div>
-    </main>
+    </div>
   );
 }
 
-function Stat({
-  icon,
-  value,
-  label,
-}: {
-  icon: React.ReactNode;
-  value: string;
-  label: string;
-}) {
+export default function SearchPage() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-neutral-900 p-5 text-center">
-      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-orange-500/20 text-orange-400">
-        {icon}
-      </div>
-
-      <div className="text-2xl font-bold">{value}</div>
-
-      <div className="mt-1 text-sm text-neutral-400">{label}</div>
-    </div>
+    <Suspense fallback={<div className="container mx-auto px-4 py-8">Yükleniyor...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 }

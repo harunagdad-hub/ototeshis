@@ -1,234 +1,87 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import { faultDatabase } from "@/data/database/faultDatabase";
+import React from 'react';
+import Link from 'next/link';
+import { faultDatabase } from '@/data/database/faultDatabase';
+import { notFound } from 'next/navigation';
 
-type Props = {
+interface PageProps {
   params: Promise<{
     slug: string;
   }>;
-};
+}
 
-export default async function FaultPage({ params }: Props) {
-  const { slug } = await params;
-
+export default async function FaultDetailPage({ params }: PageProps) {
+  const resolvedParams = await params;
   const fault = faultDatabase.find(
-    (item) => item.id === slug || item.slug === slug
+    (f) => f.slug.toLowerCase() === resolvedParams.slug.toLowerCase()
   );
 
-  if (!fault) return notFound();
+  if (!fault) {
+    notFound();
+  }
 
   return (
-    <main className="mx-auto max-w-7xl p-10">
-
-      <h1 className="text-5xl font-bold">
-        {fault.title}
-      </h1>
-
-      <p className="mt-5 text-lg text-neutral-400">
-        <div className="mt-8 grid gap-4 md:grid-cols-4">
-
-  <div className="rounded-xl border border-white/10 bg-neutral-900 p-5">
-    <div className="text-sm text-neutral-400">Kategori</div>
-    <div className="mt-2 text-xl font-bold">
-      {fault.category}
-    </div>
-  </div>
-
-  <div className="rounded-xl border border-white/10 bg-neutral-900 p-5">
-    <div className="text-sm text-neutral-400">Önem Derecesi</div>
-    <div className="mt-2 text-xl font-bold text-red-400">
-      {fault.severity}
-    </div>
-  </div>
-
-  <div className="rounded-xl border border-white/10 bg-neutral-900 p-5">
-    <div className="text-sm text-neutral-400">Tamir Süresi</div>
-    <div className="mt-2 text-xl font-bold">
-      {fault.repairTime}
-    </div>
-  </div>
-
-  <div className="rounded-xl border border-white/10 bg-neutral-900 p-5">
-    <div className="text-sm text-neutral-400">Zorluk</div>
-    <div className="mt-2 text-xl font-bold">
-      {fault.difficulty}
-    </div>
-  </div>
-
-</div>
-        {fault.shortDescription}
-      </p>
-
-      <div className="mt-10 grid gap-8 lg:grid-cols-2">
-
-        <section className="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-          <h2 className="text-2xl font-bold text-orange-400">
-            Belirtiler
-          </h2>
-
-          <ul className="mt-5 space-y-3">
-            {fault.symptoms.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-          <h2 className="text-2xl font-bold text-orange-400">
-            Muhtemel Nedenler
-          </h2>
-
-          <ul className="mt-5 space-y-3">
-            {fault.causes.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-          <h2 className="text-2xl font-bold text-orange-400">
-            Çözüm
-          </h2>
-
-          <ul className="mt-5 space-y-3">
-            {fault.solutions.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-          <h2 className="text-2xl font-bold text-orange-400">
-            OBD Kodları
-          </h2>
-
-          <div className="mt-5 flex flex-wrap gap-3">
-            {fault.obdCodes.map((code) => (
-              <Link
-                key={code}
-                href={`/obd/${code}`}
-                className="rounded-lg bg-orange-500 px-4 py-2 font-semibold text-white hover:bg-orange-600"
-              >
-                {code}
-              </Link>
-            ))}
-          </div>
-        </section>
-
-      </div>
-<section className="mt-8 rounded-2xl border border-white/10 bg-neutral-900 p-6">
-  <h2 className="text-2xl font-bold text-orange-400">
-    Etkilenen Motorlar
-  </h2>
-
-  <div className="mt-5 flex flex-wrap gap-3">
-    {fault.affectedEngines.map((engine) => (
-      <span
-        key={engine}
-        className="rounded-full bg-orange-500/20 px-4 py-2"
-      >
-        {engine}
-      </span>
-    ))}
-  </div>
-</section>
-
-<section className="mt-8 rounded-2xl border border-white/10 bg-neutral-900 p-6">
-  <h2 className="text-2xl font-bold text-orange-400">
-    Etkilenen Modeller
-  </h2>
-
-  <div className="mt-5 flex flex-wrap gap-3">
-    {fault.affectedModels.map((model) => (
-      <span
-        key={model}
-        className="rounded-full bg-white/10 px-4 py-2"
-      >
-        {model}
-      </span>
-    ))}
-  </div>
-</section>
-
-<section className="mt-8 rounded-2xl border border-white/10 bg-neutral-900 p-6">
-  <h2 className="text-2xl font-bold text-orange-400">
-    Gerekli Parçalar
-  </h2>
-
-  <ul className="mt-5 space-y-3">
-    {fault.requiredParts.map((part) => (
-      <li key={part}>🔧 {part}</li>
-    ))}
-  </ul>
-</section>
-
-<section className="mt-8 rounded-2xl border border-white/10 bg-neutral-900 p-6">
-  <h2 className="text-2xl font-bold text-orange-400">
-    Koruyucu Bakım
-  </h2>
-
-  <ul className="mt-5 space-y-3">
-    {fault.preventiveMaintenance.map((item) => (
-      <li key={item}>✔ {item}</li>
-    ))}
-  </ul>
-</section>
-      <div className="mt-10 rounded-2xl border border-orange-500/20 bg-orange-500/10 p-8">
-
-        <h2 className="text-2xl font-bold">
-          Tahmini Tamir Maliyeti
-        </h2>
-
-        <p className="mt-4 text-3xl font-bold text-orange-400">
-          ₺{fault.estimatedCost.min.toLocaleString("tr-TR")} - ₺{fault.estimatedCost.max.toLocaleString("tr-TR")}
-        </p>
-
-        <p className="mt-3 text-neutral-400">
-          Tahmini Tamir Süresi: {fault.repairTime}
-        </p>
-
-        <p className="mt-2 text-neutral-400">
-          Zorluk: {fault.difficulty}
-        </p>
-
-      </div>
-<section className="mt-10 rounded-2xl border border-white/10 bg-neutral-900 p-6">
-
-  <h2 className="text-2xl font-bold text-orange-400">
-    İlgili Arızalar
-  </h2>
-
-  <div className="mt-6 grid gap-4 md:grid-cols-3">
-
-    {fault.relatedFaults.map((id) => {
-
-      const related = faultDatabase.find(
-        (item) => item.id === id
-      );
-
-      if (!related) return null;
-
-      return (
-        <Link
-          key={related.id}
-          href={`/faults/${related.slug}`}
-          className="rounded-xl border border-white/10 bg-black/30 p-5 transition hover:border-orange-500 hover:bg-neutral-800"
-        >
-          <div className="text-lg font-bold">
-            {related.title}
-          </div>
-
-          <div className="mt-2 text-sm text-neutral-400">
-            {related.shortDescription}
-          </div>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="mb-6">
+        <Link href="/brands" className="text-sm text-blue-600 hover:underline">
+          ← Markalara Dön
         </Link>
-      );
+      </div>
 
-    })}
+      <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm mb-8">
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <span className={`px-3 py-1 rounded text-xs font-semibold ${
+            fault.severity === 'CRITICAL_STOP' ? 'bg-red-100 text-red-800' :
+            fault.severity === 'MODERATE_SERVICE_SOON' ? 'bg-amber-100 text-amber-800' :
+            'bg-blue-100 text-blue-800'
+          }`}>
+            {fault.severity === 'CRITICAL_STOP' ? 'Kritik Risk — Acil Müdahale' : 'Servis Kontrolü Önerilir'}
+          </span>
+          <span className="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded font-medium">
+            {fault.category}
+          </span>
+        </div>
 
-  </div>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{fault.title}</h1>
+        <p className="text-gray-600 text-base leading-relaxed mb-6">{fault.shortDescription}</p>
 
-</section>
-    </main>
+        {fault.obdCodes.length > 0 && (
+          <div className="mb-6">
+            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">İlişkili OBD-II Kodları</h3>
+            <div className="flex flex-wrap gap-2">
+              {fault.obdCodes.map((code) => (
+                <span key={code} className="bg-gray-900 text-green-400 font-mono text-sm px-3 py-1 rounded-md">
+                  {code}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            ⚠️ Yaygın Belirtiler (Semptomlar)
+          </h2>
+          <ul className="space-y-2">
+            {fault.symptoms.map((symptom, idx) => (
+              <li key={idx} className="flex items-start text-sm text-gray-700">
+                <span className="text-blue-500 mr-2">•</span>
+                {symptom}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            🛠️ Çözüm Önerisi & Onarım
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            {fault.solutionSummary}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }

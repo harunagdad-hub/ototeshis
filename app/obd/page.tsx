@@ -1,59 +1,83 @@
-import Link from "next/link";
-import { obdCodes } from "@/data/database/obdCodes";
-import Badge from "@/components/ui/Badge";
+import React from 'react';
+import Link from 'next/link';
 
-export default function OBDIndexPage() {
+// Örnek OBD kod verisi veya veritabanından gelen tip tanımı
+interface ObdCode {
+  code: string;
+  title: string;
+  description: string;
+  severity: 'CRITICAL_STOP' | 'MODERATE_SERVICE_SOON' | 'MINOR_CHECK_LATER';
+}
+
+const obdCodes: ObdCode[] = [
+  {
+    code: 'P0300',
+    title: 'Rastgele/Çoklu Silindir Ateşleme Hatası',
+    description: 'Motor silindirlerinde düzensiz ateşleme algılandı.',
+    severity: 'CRITICAL_STOP',
+  },
+  {
+    code: 'P0420',
+    title: 'Katalizör Sistemi Verimliliği Eşik Altında',
+    description: 'Katalitik konvertör performansı beklenen düzeyin altında.',
+    severity: 'MODERATE_SERVICE_SOON',
+  },
+  {
+    code: 'P0135',
+    title: 'Oksijen Sensörü Isıtıcı Devre Arızası',
+    description: 'Oksijen sensörü ısıtıcı devresinde tepki alınamıyor.',
+    severity: 'MINOR_CHECK_LATER',
+  },
+];
+
+export default function ObdPage() {
   return (
-    <main className="min-h-screen bg-neutral-950 text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">OBD-II Arıza Kodları</h1>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {obdCodes.map((obd) => {
+          const severityColor =
+            obd.severity === 'CRITICAL_STOP'
+              ? 'bg-red-100 text-red-800 border-red-200'
+              : obd.severity === 'MODERATE_SERVICE_SOON'
+              ? 'bg-amber-100 text-amber-800 border-amber-200'
+              : 'bg-blue-100 text-blue-800 border-blue-200';
 
-        <h1 className="text-5xl font-bold">
-          OBD-II Hata Kodları
-        </h1>
+          const severityText =
+            obd.severity === 'CRITICAL_STOP'
+              ? 'Acil / Kritik'
+              : obd.severity === 'MODERATE_SERVICE_SOON'
+              ? 'Orta Seviye'
+              : 'Düşük Seviye';
 
-        <p className="mt-4 text-xl text-neutral-400">
-          Motor arıza lambasında karşılaşabileceğin standart hata kodları ve anlamları.
-        </p>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {obdCodes.map((obd) => {
-            const severityColor =
-              obd.severity === "Yüksek"
-                ? "red"
-                : obd.severity === "Orta"
-                ? "orange"
-                : "green";
-
-            return (
+          return (
+            <div
+              key={obd.code}
+              className="p-5 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xl font-bold text-gray-900">{obd.code}</span>
+                <span className={`text-xs px-2.5 py-1 rounded font-medium border ${severityColor}`}>
+                  {severityText}
+                </span>
+              </div>
+              <h2 className="text-base font-semibold text-gray-800 mb-2">
+                {obd.title}
+              </h2>
+              <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                {obd.description}
+              </p>
               <Link
-                key={obd.code}
-                href={`/obd/${obd.code}`}
-                className="group block rounded-2xl border border-white/10 bg-neutral-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:bg-neutral-800"
+                href={`/obd/${obd.code.toLowerCase()}`}
+                className="text-sm font-medium text-blue-600 hover:underline"
               >
-                <div className="flex items-center justify-between">
-                  <h2 className="text-2xl font-bold text-white group-hover:text-orange-400">
-                    {obd.code}
-                  </h2>
-
-                  <Badge
-                    text={obd.severity}
-                    color={severityColor}
-                  />
-                </div>
-
-                <p className="mt-2 text-neutral-300">
-                  {obd.title}
-                </p>
-
-                <p className="mt-4 text-sm text-neutral-500">
-                  {obd.system}
-                </p>
+                Detayları Gör →
               </Link>
-            );
-          })}
-        </div>
-
+            </div>
+          );
+        })}
       </div>
-    </main>
+    </div>
   );
 }
