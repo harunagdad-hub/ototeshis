@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
+/*
+  OTOTEŞHİS — "Motor Bölmesi" tema paleti.
+  Bu değişkenler Tailwind'in varsayılan neutral/orange/red/green/yellow
+  tonlarının yerini alır, böylece mevcut bg-neutral-950, text-orange-400
+  gibi sınıflar tüm sitede otomatik olarak yeni renklere döner.
+*/
+@theme {
+  /* Zemin & panel — koyu, yeşilimsi antrasit (motor bölmesi hissi) */
+  --color-neutral-950: #10160f;
+  --color-neutral-900: #161f18;
+  --color-neutral-800: #1f2a22;
+  --color-neutral-500: #5a6b60;
+  --color-neutral-400: #93a196;
+  --color-neutral-300: #c7d0c7;
+
+  /* Amber — gösterge paneli uyarı rengi, ana aksiyon rengi */
+  --color-orange-300: #ffd9a0;
+  --color-orange-400: #f5b15a;
+  --color-orange-500: #f2a63d;
+  --color-orange-600: #d98a22;
+
+  /* Rust — kritik/yüksek önem seviyesi */
+  --color-red-400: #e8836a;
+  --color-red-500: #d6502f;
+
+  /* Yosun yeşili — düşük önem / iyi durum */
+  --color-green-400: #8fcb8a;
+  --color-green-500: #5fae5a;
+
+  /* Hardal — orta önem, ikincil uyarı */
+  --color-yellow-400: #f0c05a;
+  --color-yellow-500: #d9a73e;
+
+  /* Soğuk teal — dekoratif vurgu (amber'e karşıt soğukluk) */
+  --color-blue-400: #4f8f82;
+  --color-blue-500: #2f6e63;
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-neutral-950);
+  --foreground: #ede7d9;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* İnce teknik-çizim doku — arka planlarda hafif blueprint hissi için */
+.schematic-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-neutral-400) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-neutral-400) 8%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@keyframes scan-sweep {
+  0% { transform: translateX(-10%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(110%); opacity: 0; }
+}
+
+.animate-scan-sweep {
+  animation: scan-sweep 4.5s ease-in-out infinite;
+}
+
+@keyframes marker-pulse {
+  0%, 100% { r: 5; opacity: 0.9; }
+  50% { r: 9; opacity: 0.35; }
+}
+
+.fault-marker-ring {
+  animation: marker-pulse 2.4s ease-in-out infinite;
 }

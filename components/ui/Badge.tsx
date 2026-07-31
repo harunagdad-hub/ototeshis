@@ -8,15 +8,15 @@ export default function Badge({
   color = "orange",
 }: Props) {
   const colors = {
-    red: "bg-red-500/20 text-red-400",
-    orange: "bg-orange-500/20 text-orange-400",
-    green: "bg-green-500/20 text-green-400",
-    blue: "bg-blue-500/20 text-blue-400",
+    red: "bg-red-500/15 text-red-400 border border-red-500/30",
+    orange: "bg-orange-500/15 text-orange-400 border border-orange-500/30",
+    green: "bg-green-500/15 text-green-400 border border-green-500/30",
+    blue: "bg-blue-500/15 text-blue-400 border border-blue-500/30",
   };
 
   return (
     <span
-      className={`rounded-full px-4 py-2 text-sm font-semibold ${colors[color]}`}
+      className={`rounded-full px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-wide ${colors[color]}`}
     >
       {text}
     </span>

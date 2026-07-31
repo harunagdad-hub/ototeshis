@@ -12,7 +12,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`rounded-xl bg-orange-500 px-5 py-3 font-semibold text-white transition hover:bg-orange-600 ${className}`}
+      className={`rounded-xl bg-orange-500 px-5 py-3 font-semibold text-neutral-950 transition hover:bg-orange-400 ${className}`}
     >
       {children}
     </button>

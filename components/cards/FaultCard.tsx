@@ -21,7 +21,7 @@ export default function FaultCard({ fault, href }: Props) {
       className="group block rounded-2xl border border-white/10 bg-neutral-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:bg-neutral-800"
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-white group-hover:text-orange-400">
+        <h2 className="font-display text-2xl font-bold text-neutral-100 group-hover:text-orange-400">
           {fault.title}
         </h2>
 
@@ -39,7 +39,7 @@ export default function FaultCard({ fault, href }: Props) {
         {fault.obdCodes.map((code) => (
           <span
             key={code}
-            className="rounded-lg bg-neutral-800 px-3 py-1 text-sm"
+            className="rounded-lg border border-white/10 bg-neutral-800 px-3 py-1 font-mono text-sm text-neutral-300"
           >
             {code}
           </span>
@@ -47,7 +47,7 @@ export default function FaultCard({ fault, href }: Props) {
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-        <span className="text-sm text-neutral-500">
+        <span className="font-mono text-sm text-neutral-500">
           ⏱ {fault.repairTime}
         </span>
 

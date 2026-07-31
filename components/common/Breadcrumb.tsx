@@ -11,7 +11,7 @@ type Props = {
 
 export default function Breadcrumb({ items }: Props) {
   return (
-    <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-neutral-400">
+    <div className="mb-8 flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-wide text-neutral-500">
       {items.map((item, index) => (
         <div key={item.href} className="flex items-center gap-2">
           <Link href={item.href} className="hover:text-orange-400">
@@ -19,7 +19,7 @@ export default function Breadcrumb({ items }: Props) {
           </Link>
 
           {index < items.length - 1 && (
-            <span>/</span>
+            <span className="text-neutral-700">/</span>
           )}
         </div>
       ))}

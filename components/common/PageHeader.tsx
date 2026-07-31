@@ -9,7 +9,7 @@ export default function PageHeader({
 }: Props) {
   return (
     <div className="mb-10">
-      <h1 className="text-5xl font-bold text-white">
+      <h1 className="font-display text-4xl font-bold text-neutral-100 md:text-5xl">
         {title}
       </h1>
 
