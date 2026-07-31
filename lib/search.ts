@@ -64,7 +64,7 @@ export function searchDatabase(query: string): SearchResult[] {
         id: item.id,
         title: item.name,
         subtitle: "Model",
-        href: `/brands/volkswagen/${item.id}`, // şimdilik
+        href: `/brands/${item.manufacturerId}/${item.id}`,
         score: 30,
       });
     }

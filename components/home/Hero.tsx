@@ -27,13 +27,14 @@ export default function Hero() {
             ekranda gör.
           </p>
 
-          <form className="mt-8 flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:flex-row">
+          <form action="/search" method="GET" className="mt-8 flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:flex-row">
             <input
+              name="q"
               className="h-14 flex-1 rounded-xl border border-white/10 bg-neutral-950/60 px-5 font-mono text-sm text-neutral-100 outline-none placeholder:text-neutral-500"
               placeholder="Golf 7 1.6 TDI • P0401 • EA288..."
             />
 
-            <button className="flex h-14 items-center justify-center rounded-xl bg-orange-500 px-8 font-semibold text-neutral-950 transition hover:bg-orange-400">
+            <button type="submit" className="flex h-14 items-center justify-center rounded-xl bg-orange-500 px-8 font-semibold text-neutral-950 transition hover:bg-orange-400">
               <Search className="mr-2 h-5 w-5" />
               Ara
             </button>

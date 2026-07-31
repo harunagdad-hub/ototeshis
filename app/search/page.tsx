@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Search, CarFront, Wrench, Cpu } from "lucide-react";
 import { searchDatabase } from "@/lib/search";
 
-export default function SearchPage() {
-  const [query, setQuery] = useState("");
+function SearchPageInner() {
+  const params = useSearchParams();
+  const [query, setQuery] = useState(params.get("q") ?? "");
 
   const filtered = searchDatabase(query);
 
@@ -63,13 +65,13 @@ export default function SearchPage() {
         {/* İstatistikler */}
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
 
-          <Stat icon={<CarFront className="h-5 w-5" />} value="25+" label="Marka" />
+          <Stat icon={<CarFront className="h-5 w-5" />} value="4" label="Marka" />
 
-          <Stat icon={<CarFront className="h-5 w-5" />} value="300+" label="Model" />
+          <Stat icon={<CarFront className="h-5 w-5" />} value="12" label="Model" />
 
-          <Stat icon={<Wrench className="h-5 w-5" />} value="8.000+" label="Arıza" />
+          <Stat icon={<Wrench className="h-5 w-5" />} value="8" label="Arıza" />
 
-          <Stat icon={<Cpu className="h-5 w-5" />} value="2.500+" label="OBD Kodu" />
+          <Stat icon={<Cpu className="h-5 w-5" />} value="2" label="OBD Kodu" />
 
         </div>
 
@@ -149,5 +151,13 @@ function Stat({
 
       <div className="mt-1 text-sm text-neutral-400">{label}</div>
     </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={null}>
+      <SearchPageInner />
+    </Suspense>
   );
 }
