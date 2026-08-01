@@ -170,6 +170,46 @@ commonFaults:[
 "turbo"
 ]
 
+},
+
+{
+id:"ecoboost",
+
+name:"EcoBoost",
+
+manufacturer:"Ford",
+
+fuel:"Benzin",
+
+years:"2012-",
+
+description:"Ford'un küçük hacimli, turbo şarjlı benzinli motor ailesi. Özellikle 2012-2019 arası üretilen 1.0-1.6 litrelik versiyonları soğutma sistemi kaynaklı silindir kapağı çatlaması ile tanınır.",
+
+commonFaults:[
+"coolant-leak"
+]
+
+},
+
+{
+id:"ecoblue",
+
+name:"EcoBlue",
+
+manufacturer:"Ford",
+
+fuel:"Dizel",
+
+years:"2016-",
+
+description:"Ford'un 2016 sonrası dizel motor ailesi. Yağ banyosunda çalışan (wet belt) triger kayışı tasarımıyla bilinir.",
+
+commonFaults:[
+"wet-belt",
+"egr",
+"dpf"
+]
+
 }
 
 ];

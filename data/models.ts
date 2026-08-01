@@ -58,4 +58,15 @@ export const models = {
       name: "Megane",
     },
   ],
+
+  ford: [
+    {
+      id: "focus",
+      name: "Focus",
+    },
+    {
+      id: "fiesta",
+      name: "Fiesta",
+    },
+  ],
 };

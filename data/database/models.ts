@@ -84,6 +84,20 @@ id:"megane",
 manufacturerId:"renault",
 name:"Megane",
 segment:"C"
+},
+
+{
+id:"focus",
+manufacturerId:"ford",
+name:"Focus",
+segment:"C"
+},
+
+{
+id:"fiesta",
+manufacturerId:"ford",
+name:"Fiesta",
+segment:"B"
 }
 
 ];

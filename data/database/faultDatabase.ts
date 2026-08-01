@@ -471,7 +471,7 @@ export const faultDatabase: FaultDatabase[] = [
     "maf",
   ],
 },
-
+];
 {
   id: "timing-chain",
 
@@ -884,6 +884,217 @@ export const faultDatabase: FaultDatabase[] = [
   relatedFaults: [
     "egr",
     "turbo",
+  ],
+},
+{
+  id: "coolant-leak",
+
+  slug: "ecoboost-silindir-kapagi-catlamasi",
+
+  title: "Silindir Kapağı Çatlaması / Soğutucu Sıvı Kaçağı (EcoBoost)",
+
+  shortDescription:
+    "Soğutma sistemindeki tasarım kaynaklı sızıntı, silindir kapağının çatlamasına ve motorun aşırı ısınmasına yol açar.",
+
+  category: "Soğutma",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "ecoboost",
+  ],
+
+  affectedEngines: [
+    "1.0 EcoBoost",
+  ],
+
+  affectedModels: [
+    "Fiesta",
+    "Focus",
+    "EcoSport",
+    "Kuga",
+  ],
+
+  obdCodes: [
+    "P1299",
+    "P0217",
+  ],
+
+  symptoms: [
+    "Soğutucu sıvı seviyesinin sürekli düşmesi",
+    "Egzozdan beyaz duman",
+    "Aşırı ısınma uyarısı",
+    "Ani güç kaybı",
+    "Motor arıza lambası",
+  ],
+
+  causes: [
+    "Erken dönem degas (genleşme) hortumunun kırılganlaşması",
+    "Termostat gövdesindeki tasarım hatası",
+    "Silindir kapağındaki soğutma kanallarına sıvı sızması",
+  ],
+
+  diagnostics: [
+    "Soğutma sistemi basınç testi",
+    "OBD taraması (P1299/P0217 kontrolü)",
+    "Silindir kapağı düzlük/çatlak kontrolü",
+  ],
+
+  solutions: [
+    "Degas hortumu ve termostat gövdesinin yenilenmesi",
+    "Çatlak tespit edilirse silindir kapağı değişimi (yeni kapak cıvataları ve contayla)",
+    "Triger kayışı, su pompası ve termostatın aynı anda yenilenmesi",
+  ],
+
+  requiredParts: [
+    "Silindir Kapağı",
+    "Kapak Contası",
+    "Degas Hortumu",
+    "Termostat",
+  ],
+
+  preventiveMaintenance: [
+    "Soğutucu sıvı seviyesini düzenli kontrol et",
+    "İlk uyarı belirtisinde aracı sürmeye devam etme",
+    "Üreticinin güncellenmiş parçalarıyla erken değişim yaptır",
+  ],
+
+  keywords: [
+    "ecoboost",
+    "silindir kapağı",
+    "soğutucu sıvı",
+    "aşırı ısınma",
+    "beyaz duman",
+    "coolant",
+  ],
+
+  aliases: [
+    "silindir kapağı çatlaması",
+    "ecoboost soğutucu kaçağı",
+    "kafa çatlaması",
+  ],
+
+  priority: 91,
+
+  estimatedCost: {
+    min: 10000,
+    max: 35000,
+    currency: "TRY",
+  },
+
+  repairTime: "5-8 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "turbo",
+  ],
+},
+
+{
+  id: "wet-belt",
+
+  slug: "ecoblue-yag-banyolu-kayis-parcalanmasi",
+
+  title: "Yağ Banyolu Kayış (Wet Belt) Parçalanması",
+
+  shortDescription:
+    "Yağ içinde çalışan triger kayışının zamanla parçalanıp yağ sistemini tıkaması, ciddi motor hasarına yol açar.",
+
+  category: "Motor",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "ecoblue",
+  ],
+
+  affectedEngines: [
+    "1.5 EcoBlue",
+    "2.0 EcoBlue",
+  ],
+
+  affectedModels: [
+    "Focus",
+    "Fiesta",
+    "Kuga",
+    "Mondeo",
+    "Transit",
+  ],
+
+  obdCodes: [
+    "P0016",
+    "P0521",
+  ],
+
+  symptoms: [
+    "Yağ basıncı uyarı lambası",
+    "Rölantide düzensizlik",
+    "Metalik ses",
+    "Ani motor durması",
+    "Çalıştırma zorluğu",
+  ],
+
+  causes: [
+    "Yakıt seyrelmesi ve kurumun yağı kirletmesi",
+    "Yağ değişim aralığının aşılması",
+    "Kayış malzemesinin yağ içinde zamanla çözülmesi",
+  ],
+
+  diagnostics: [
+    "Yağ filtresinde kayış parçacığı kontrolü",
+    "Yağ basıncı testi",
+    "OBD taraması",
+    "Triger kapağı açılarak görsel kontrol",
+  ],
+
+  solutions: [
+    "Kayışın önleyici olarak zamanında değiştirilmesi (üretici güncellemesine göre 6 yıl/100.000 km)",
+    "Yağ sistemi komple temizliği (kayış parçacığı varsa)",
+    "Yağ pompası süzgecinin kontrolü",
+  ],
+
+  requiredParts: [
+    "Triger Kayışı (Yağ Banyolu)",
+    "Gerdirici",
+    "Motor Yağı ve Filtresi",
+  ],
+
+  preventiveMaintenance: [
+    "Yağ değişimlerini asla geciktirme",
+    "Üreticinin güncellenmiş kayış değişim aralığına uy",
+    "Kısa mesafe kullanımını sınırla (yakıt seyrelmesini azaltır)",
+  ],
+
+  keywords: [
+    "wet belt",
+    "yağ banyolu kayış",
+    "triger kayışı",
+    "ecoblue",
+    "yağ basıncı",
+  ],
+
+  aliases: [
+    "wet belt arızası",
+    "yağlı kayış parçalanması",
+    "ecoblue triger sorunu",
+  ],
+
+  priority: 96,
+
+  estimatedCost: {
+    min: 6000,
+    max: 50000,
+    currency: "TRY",
+  },
+
+  repairTime: "4-6 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "egr",
+    "dpf",
   ],
 }
 

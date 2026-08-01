@@ -102,4 +102,30 @@ export const generations = {
       years: "2016-2022",
     },
   ],
+
+  focus: [
+    {
+      id: "focus-mk3",
+      name: "Focus Mk3",
+      years: "2011-2018",
+    },
+    {
+      id: "focus-mk4",
+      name: "Focus Mk4",
+      years: "2018-...",
+    },
+  ],
+
+  fiesta: [
+    {
+      id: "fiesta-mk7",
+      name: "Fiesta Mk7",
+      years: "2008-2017",
+    },
+    {
+      id: "fiesta-mk8",
+      name: "Fiesta Mk8",
+      years: "2017-2023",
+    },
+  ],
 };

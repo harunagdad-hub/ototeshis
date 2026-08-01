@@ -161,6 +161,75 @@ torque:[260],
 
 years:"2012-2023"
 
+},
+
+{
+id:"ecoboost-10-100",
+
+family:"ecoboost",
+
+name:"1.0 EcoBoost 100 HP",
+
+fuel:"Petrol",
+
+displacement:999,
+
+cylinders:3,
+
+turbo:true,
+
+power:[100],
+
+torque:[170],
+
+years:"2012-2019"
+
+},
+
+{
+id:"ecoboost-10-125",
+
+family:"ecoboost",
+
+name:"1.0 EcoBoost 125 HP",
+
+fuel:"Petrol",
+
+displacement:999,
+
+cylinders:3,
+
+turbo:true,
+
+power:[125],
+
+torque:[200],
+
+years:"2014-2023"
+
+},
+
+{
+id:"ecoblue-15-120",
+
+family:"ecoblue",
+
+name:"1.5 EcoBlue 120 HP",
+
+fuel:"Diesel",
+
+displacement:1499,
+
+cylinders:4,
+
+turbo:true,
+
+power:[120],
+
+torque:[300],
+
+years:"2018-2023"
+
 }
 
 ];

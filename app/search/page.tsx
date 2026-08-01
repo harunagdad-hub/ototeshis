@@ -65,11 +65,11 @@ function SearchPageInner() {
         {/* İstatistikler */}
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
 
-          <Stat icon={<CarFront className="h-5 w-5" />} value="4" label="Marka" />
+          <Stat icon={<CarFront className="h-5 w-5" />} value="5" label="Marka" />
 
-          <Stat icon={<CarFront className="h-5 w-5" />} value="12" label="Model" />
+          <Stat icon={<CarFront className="h-5 w-5" />} value="14" label="Model" />
 
-          <Stat icon={<Wrench className="h-5 w-5" />} value="8" label="Arıza" />
+          <Stat icon={<Wrench className="h-5 w-5" />} value="10" label="Arıza" />
 
           <Stat icon={<Cpu className="h-5 w-5" />} value="2" label="OBD Kodu" />
 

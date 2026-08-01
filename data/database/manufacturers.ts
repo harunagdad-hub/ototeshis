@@ -42,6 +42,13 @@ id:"renault",
 name:"Renault",
 country:"France",
 logo:"/logos/renault.svg"
+},
+
+{
+id:"ford",
+name:"Ford",
+country:"United States",
+logo:"/logos/ford.svg"
 }
 
 ];

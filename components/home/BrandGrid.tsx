@@ -7,7 +7,6 @@ import { manufacturers } from "@/data/database/manufacturers";
 const upcoming = [
   "Mercedes-Benz",
   "Toyota",
-  "Ford",
   "Peugeot",
   "Opel",
   "Hyundai",

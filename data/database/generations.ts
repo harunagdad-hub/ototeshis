@@ -91,6 +91,34 @@ id:"megane-4",
 modelId:"megane",
 name:"Megane IV",
 years:"2016-2022"
+},
+
+{
+id:"focus-mk3",
+modelId:"focus",
+name:"Focus Mk3",
+years:"2011-2018"
+},
+
+{
+id:"focus-mk4",
+modelId:"focus",
+name:"Focus Mk4",
+years:"2018-"
+},
+
+{
+id:"fiesta-mk7",
+modelId:"fiesta",
+name:"Fiesta Mk7",
+years:"2008-2017"
+},
+
+{
+id:"fiesta-mk8",
+modelId:"fiesta",
+name:"Fiesta Mk8",
+years:"2017-2023"
 }
 
 ];

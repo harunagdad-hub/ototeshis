@@ -330,4 +330,72 @@ export const engines = {
       years: "2016-2022",
     },
   ],
+
+  "focus-mk3": [
+    {
+      id: "10-ecoboost-100",
+      name: "1.0 EcoBoost 100",
+      code: "EcoBoost",
+      fuel: "Benzin",
+      power: "100-125 PS",
+      years: "2011-2018",
+    },
+    {
+      id: "10-ecoboost-140",
+      name: "1.0 EcoBoost 140",
+      code: "EcoBoost",
+      fuel: "Benzin",
+      power: "140 PS",
+      years: "2014-2018",
+    },
+  ],
+
+  "focus-mk4": [
+    {
+      id: "10-ecoboost-125",
+      name: "1.0 EcoBoost 125",
+      code: "EcoBoost",
+      fuel: "Benzin",
+      power: "125 PS",
+      years: "2018-...",
+    },
+    {
+      id: "15-ecoblue-120",
+      name: "1.5 EcoBlue 120",
+      code: "EcoBlue",
+      fuel: "Dizel",
+      power: "120 PS",
+      years: "2018-...",
+    },
+  ],
+
+  "fiesta-mk7": [
+    {
+      id: "10-ecoboost-100",
+      name: "1.0 EcoBoost 100",
+      code: "EcoBoost",
+      fuel: "Benzin",
+      power: "100-125 PS",
+      years: "2012-2017",
+    },
+  ],
+
+  "fiesta-mk8": [
+    {
+      id: "10-ecoboost-100",
+      name: "1.0 EcoBoost 100",
+      code: "EcoBoost",
+      fuel: "Benzin",
+      power: "100-125 PS",
+      years: "2017-2023",
+    },
+    {
+      id: "15-ecoblue-85",
+      name: "1.5 EcoBlue 85",
+      code: "EcoBlue",
+      fuel: "Dizel",
+      power: "85-120 PS",
+      years: "2018-2023",
+    },
+  ],
 };
