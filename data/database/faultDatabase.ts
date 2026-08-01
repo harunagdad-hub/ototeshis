@@ -471,7 +471,6 @@ export const faultDatabase: FaultDatabase[] = [
     "maf",
   ],
 },
-];
 {
   id: "timing-chain",
 
