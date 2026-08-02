@@ -128,4 +128,110 @@ export const generations = {
       years: "2017-2023",
     },
   ],
+
+  "c-serisi": [
+    {
+      id: "w204",
+      name: "C Serisi W204",
+      years: "2007-2014",
+    },
+    {
+      id: "w205",
+      name: "C Serisi W205",
+      years: "2014-2021",
+    },
+  ],
+
+  "e-serisi": [
+    {
+      id: "w212",
+      name: "E Serisi W212",
+      years: "2009-2016",
+    },
+  ],
+
+  corolla: [
+    {
+      id: "e170",
+      name: "Corolla E170",
+      years: "2013-2019",
+    },
+    {
+      id: "e210",
+      name: "Corolla E210",
+      years: "2019-...",
+    },
+  ],
+
+  yaris: [
+    {
+      id: "xp130",
+      name: "Yaris XP130",
+      years: "2011-2020",
+    },
+  ],
+
+  "308": [
+    {
+      id: "t9",
+      name: "308 T9",
+      years: "2013-2021",
+    },
+  ],
+
+  "208": [
+    {
+      id: "a9",
+      name: "208 A9",
+      years: "2012-2019",
+    },
+  ],
+
+  astra: [
+    {
+      id: "astra-j",
+      name: "Astra J",
+      years: "2009-2015",
+    },
+  ],
+
+  corsa: [
+    {
+      id: "corsa-e",
+      name: "Corsa E",
+      years: "2014-2019",
+    },
+  ],
+
+  i20: [
+    {
+      id: "i20-pb",
+      name: "i20 PB",
+      years: "2014-2020",
+    },
+  ],
+
+  i30: [
+    {
+      id: "i30-pd",
+      name: "i30 PD",
+      years: "2016-2023",
+    },
+  ],
+
+  egea: [
+    {
+      id: "egea-1",
+      name: "Egea (1. Nesil)",
+      years: "2015-...",
+    },
+  ],
+
+  doblo: [
+    {
+      id: "doblo-3",
+      name: "Doblo (3. Nesil)",
+      years: "2010-...",
+    },
+  ],
 };

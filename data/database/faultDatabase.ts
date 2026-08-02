@@ -20,12 +20,24 @@ export const faultDatabase: FaultDatabase[] = [
       "ea189",
       "ea188",
       "k9k",
+      "om651",
+      "toyota-diesel",
+      "dv6-bluehdi",
+      "cdti",
+      "crdi",
+      "multijet",
     ],
 
     affectedEngines: [
       "1.6 TDI",
       "2.0 TDI",
       "1.5 dCi",
+      "OM651",
+      "D-4D",
+      "BlueHDi",
+      "CDTI",
+      "CRDi",
+      "MultiJet",
     ],
 
     affectedModels: [
@@ -38,6 +50,12 @@ export const faultDatabase: FaultDatabase[] = [
       "Caddy",
       "Clio",
       "Megane",
+      "C Serisi",
+      "Corolla",
+      "308",
+      "Astra",
+      "i20",
+      "Egea",
     ],
 
     obdCodes: [
@@ -143,12 +161,24 @@ export const faultDatabase: FaultDatabase[] = [
       "ea189",
       "ea188",
       "k9k",
+      "om651",
+      "toyota-diesel",
+      "dv6-bluehdi",
+      "cdti",
+      "crdi",
+      "multijet",
     ],
 
     affectedEngines: [
       "1.6 TDI",
       "2.0 TDI",
       "1.5 dCi",
+      "OM651",
+      "D-4D",
+      "BlueHDi",
+      "CDTI",
+      "CRDi",
+      "MultiJet",
     ],
 
     affectedModels: [
@@ -161,6 +191,12 @@ export const faultDatabase: FaultDatabase[] = [
       "Caddy",
       "Clio",
       "Megane",
+      "C Serisi",
+      "Corolla",
+      "308",
+      "Astra",
+      "i20",
+      "Egea",
     ],
 
     obdCodes: [
@@ -375,6 +411,9 @@ export const faultDatabase: FaultDatabase[] = [
     "ea211",
     "ea888",
     "k9k",
+    "om651",
+    "cdti",
+    "multijet",
   ],
 
   affectedEngines: [
@@ -383,6 +422,9 @@ export const faultDatabase: FaultDatabase[] = [
     "1.4 TSI",
     "2.0 TSI",
     "1.5 dCi",
+    "OM651",
+    "CDTI",
+    "MultiJet",
   ],
 
   affectedModels: [
@@ -394,6 +436,9 @@ export const faultDatabase: FaultDatabase[] = [
     "Octavia",
     "Clio",
     "Megane",
+    "C Serisi",
+    "Astra",
+    "Egea",
   ],
 
   obdCodes: [
@@ -594,17 +639,21 @@ export const faultDatabase: FaultDatabase[] = [
   engineFamilies: [
     "n47",
     "b47",
+    "dv6-bluehdi",
   ],
 
   affectedEngines: [
     "320d",
     "520d",
+    "BlueHDi",
   ],
 
   affectedModels: [
     "3 Serisi",
     "5 Serisi",
     "1 Serisi",
+    "308",
+    "208",
   ],
 
   obdCodes: [
@@ -781,7 +830,7 @@ export const faultDatabase: FaultDatabase[] = [
 
   slug: "k9k-enjektor-arizasi",
 
-  title: "Enjektör Arızası (K9K 1.5 dCi)",
+  title: "Enjektör Arızası (Dizel Common Rail)",
 
   shortDescription:
     "Yakıt enjektörlerinin aşınması veya tıkanması sonucu motor düzensiz çalışır ve güç kaybı yaşanır.",
@@ -792,10 +841,12 @@ export const faultDatabase: FaultDatabase[] = [
 
   engineFamilies: [
     "k9k",
+    "om651",
   ],
 
   affectedEngines: [
     "1.5 dCi",
+    "OM651",
   ],
 
   affectedModels: [
@@ -803,6 +854,8 @@ export const faultDatabase: FaultDatabase[] = [
     "Megane",
     "Captur",
     "Duster",
+    "C Serisi",
+    "E Serisi",
   ],
 
   obdCodes: [
@@ -1095,6 +1148,6 @@ export const faultDatabase: FaultDatabase[] = [
     "egr",
     "dpf",
   ],
-}
+},
 
-];
+{

@@ -398,4 +398,262 @@ export const engines = {
       years: "2018-2023",
     },
   ],
+
+  w204: [
+    {
+      id: "c180",
+      name: "C 180",
+      code: "M270",
+      fuel: "Benzin",
+      power: "156 PS",
+      years: "2011-2014",
+    },
+    {
+      id: "c220-cdi",
+      name: "C 220 CDI",
+      code: "OM651",
+      fuel: "Dizel",
+      power: "170 PS",
+      years: "2007-2014",
+    },
+  ],
+
+  w205: [
+    {
+      id: "c180",
+      name: "C 180",
+      code: "M274",
+      fuel: "Benzin",
+      power: "156 PS",
+      years: "2014-2021",
+    },
+    {
+      id: "c220d",
+      name: "C 220d",
+      code: "OM651",
+      fuel: "Dizel",
+      power: "170 PS",
+      years: "2014-2018",
+    },
+  ],
+
+  w212: [
+    {
+      id: "e220-cdi",
+      name: "E 220 CDI",
+      code: "OM651",
+      fuel: "Dizel",
+      power: "170 PS",
+      years: "2009-2016",
+    },
+    {
+      id: "e250",
+      name: "E 250",
+      code: "M271",
+      fuel: "Benzin",
+      power: "204 PS",
+      years: "2009-2013",
+    },
+  ],
+
+  e170: [
+    {
+      id: "16-valvematic",
+      name: "1.6 Valvematic",
+      code: "1ZR-FE",
+      fuel: "Benzin",
+      power: "132 PS",
+      years: "2013-2019",
+    },
+    {
+      id: "14-d4d",
+      name: "1.4 D-4D",
+      code: "1ND-TV",
+      fuel: "Dizel",
+      power: "90 PS",
+      years: "2013-2019",
+    },
+  ],
+
+  e210: [
+    {
+      id: "15-hybrid",
+      name: "1.5 Hybrid",
+      code: "2NR-FKE",
+      fuel: "Hibrit",
+      power: "116 PS",
+      years: "2019-...",
+    },
+    {
+      id: "16-valvematic",
+      name: "1.6 Valvematic",
+      code: "1ZR-FE",
+      fuel: "Benzin",
+      power: "132 PS",
+      years: "2019-...",
+    },
+  ],
+
+  xp130: [
+    {
+      id: "15-vvt-i",
+      name: "1.5 Dual VVT-i",
+      code: "2NR-FE",
+      fuel: "Benzin",
+      power: "111 PS",
+      years: "2011-2020",
+    },
+    {
+      id: "14-d4d",
+      name: "1.4 D-4D",
+      code: "1ND-TV",
+      fuel: "Dizel",
+      power: "90 PS",
+      years: "2011-2017",
+    },
+  ],
+
+  t9: [
+    {
+      id: "16-thp-155",
+      name: "1.6 THP 155",
+      code: "EP6",
+      fuel: "Benzin",
+      power: "155 PS",
+      years: "2013-2018",
+    },
+    {
+      id: "16-bluehdi-120",
+      name: "1.6 BlueHDi 120",
+      code: "DV6",
+      fuel: "Dizel",
+      power: "120 PS",
+      years: "2013-2021",
+    },
+  ],
+
+  a9: [
+    {
+      id: "12-puretech",
+      name: "1.2 PureTech",
+      code: "EB2",
+      fuel: "Benzin",
+      power: "82-130 PS",
+      years: "2012-2019",
+    },
+    {
+      id: "16-bluehdi-100",
+      name: "1.6 BlueHDi 100",
+      code: "DV6",
+      fuel: "Dizel",
+      power: "100-120 PS",
+      years: "2012-2019",
+    },
+  ],
+
+  "astra-j": [
+    {
+      id: "16-cdti-136",
+      name: "1.6 CDTI 136",
+      code: "CDTI",
+      fuel: "Dizel",
+      power: "136 PS",
+      years: "2009-2015",
+    },
+    {
+      id: "14-turbo",
+      name: "1.4 Turbo",
+      code: "A14NET",
+      fuel: "Benzin",
+      power: "140 PS",
+      years: "2010-2015",
+    },
+  ],
+
+  "corsa-e": [
+    {
+      id: "13-cdti-95",
+      name: "1.3 CDTI 95",
+      code: "CDTI",
+      fuel: "Dizel",
+      power: "95 PS",
+      years: "2014-2019",
+    },
+    {
+      id: "10-ecotec",
+      name: "1.0 Turbo Ecotec",
+      code: "B10XFT",
+      fuel: "Benzin",
+      power: "90-115 PS",
+      years: "2014-2019",
+    },
+  ],
+
+  "i20-pb": [
+    {
+      id: "16-crdi-90",
+      name: "1.6 CRDi 90",
+      code: "CRDi",
+      fuel: "Dizel",
+      power: "90 PS",
+      years: "2014-2020",
+    },
+    {
+      id: "12-mpi",
+      name: "1.2 MPI",
+      code: "Kappa",
+      fuel: "Benzin",
+      power: "84 PS",
+      years: "2014-2020",
+    },
+  ],
+
+  "i30-pd": [
+    {
+      id: "16-crdi-136",
+      name: "1.6 CRDi 136",
+      code: "CRDi",
+      fuel: "Dizel",
+      power: "136 PS",
+      years: "2016-2023",
+    },
+    {
+      id: "10-t-gdi",
+      name: "1.0 T-GDI",
+      code: "Kappa T-GDI",
+      fuel: "Benzin",
+      power: "120 PS",
+      years: "2017-2023",
+    },
+  ],
+
+  "egea-1": [
+    {
+      id: "13-multijet-95",
+      name: "1.3 Multijet 95",
+      code: "Multijet",
+      fuel: "Dizel",
+      power: "95 PS",
+      years: "2015-...",
+    },
+    {
+      id: "16-multijet-130",
+      name: "1.6 Multijet 130",
+      code: "Multijet",
+      fuel: "Dizel",
+      power: "120-130 PS",
+      years: "2015-...",
+    },
+  ],
+
+  "doblo-3": [
+    {
+      id: "16-multijet-105",
+      name: "1.6 Multijet 105",
+      code: "Multijet",
+      fuel: "Dizel",
+      power: "95-105 PS",
+      years: "2010-...",
+    },
+  ],
 };

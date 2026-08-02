@@ -69,4 +69,70 @@ export const models = {
       name: "Fiesta",
     },
   ],
+
+  mercedes: [
+    {
+      id: "c-serisi",
+      name: "C Serisi",
+    },
+    {
+      id: "e-serisi",
+      name: "E Serisi",
+    },
+  ],
+
+  toyota: [
+    {
+      id: "corolla",
+      name: "Corolla",
+    },
+    {
+      id: "yaris",
+      name: "Yaris",
+    },
+  ],
+
+  peugeot: [
+    {
+      id: "308",
+      name: "308",
+    },
+    {
+      id: "208",
+      name: "208",
+    },
+  ],
+
+  opel: [
+    {
+      id: "astra",
+      name: "Astra",
+    },
+    {
+      id: "corsa",
+      name: "Corsa",
+    },
+  ],
+
+  hyundai: [
+    {
+      id: "i20",
+      name: "i20",
+    },
+    {
+      id: "i30",
+      name: "i30",
+    },
+  ],
+
+  fiat: [
+    {
+      id: "egea",
+      name: "Egea",
+    },
+    {
+      id: "doblo",
+      name: "Doblo",
+    },
+  ],
 };
