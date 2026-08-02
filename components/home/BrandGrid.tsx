@@ -1,19 +1,15 @@
 import Link from "next/link";
 import { CarFront } from "lucide-react";
 import { manufacturers } from "@/data/database/manufacturers";
-
-// Yakında eklenecek markalar — henüz veri tabanında yok, ama kullanıcıya
-// yol haritasını göstermek için soluk/pasif olarak listelenir.
-const upcoming = [
-  "Mercedes-Benz",
-  "Toyota",
-  "Peugeot",
-  "Opel",
-  "Hyundai",
-  "Fiat",
-];
+import { models } from "@/data/database/models";
 
 export default function BrandGrid() {
+  // SEAT ve Škoda gibi henüz hiç modeli girilmemiş markaları gizle
+  // (aksi halde tıklanınca boş sayfaya düşerlerdi).
+  const availableBrands = manufacturers.filter((brand) =>
+    models.some((model) => model.manufacturerId === brand.id)
+  );
+
   return (
     <section className="bg-neutral-950 py-20">
       <div className="mx-auto max-w-7xl px-6">
@@ -28,7 +24,7 @@ export default function BrandGrid() {
 
         <div className="mt-12 grid grid-cols-2 gap-5 md:grid-cols-4 lg:grid-cols-5">
 
-          {manufacturers.map((brand) => (
+          {availableBrands.map((brand) => (
             <Link
               key={brand.id}
               href={`/brands/${brand.id}`}
@@ -42,25 +38,6 @@ export default function BrandGrid() {
                 {brand.name}
               </h3>
             </Link>
-          ))}
-
-          {upcoming.map((brand) => (
-            <div
-              key={brand}
-              className="rounded-2xl border border-white/5 bg-neutral-900/40 p-6 opacity-50"
-            >
-              <div className="mb-4 text-neutral-600">
-                <CarFront size={32} />
-              </div>
-
-              <h3 className="font-semibold text-neutral-500">
-                {brand}
-              </h3>
-
-              <span className="mt-1 inline-block font-mono text-[11px] uppercase tracking-widest text-neutral-600">
-                Yakında
-              </span>
-            </div>
           ))}
 
         </div>

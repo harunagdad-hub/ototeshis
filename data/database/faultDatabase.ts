@@ -1151,3 +1151,307 @@ export const faultDatabase: FaultDatabase[] = [
 },
 
 {
+  id: "timing-chain-mb",
+
+  slug: "m270-zincir-kam-ayari-arizasi",
+
+  title: "Zincir Gerdiricisi ve Kam Ayarlayıcı Arızası (M270/M274)",
+
+  shortDescription:
+    "Zincir gerdiricisinin yağ basıncını kaybetmesi ve kam mili ayarlayıcılarının aşınması motor titremesine ve zamanlama hatasına yol açar.",
+
+  category: "Motor",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "m270-m274",
+  ],
+
+  affectedEngines: [
+    "M270",
+    "M274",
+  ],
+
+  affectedModels: [
+    "C Serisi",
+    "E Serisi",
+    "A Serisi",
+    "GLA",
+  ],
+
+  obdCodes: [
+    "P001685",
+    "P0016",
+  ],
+
+  symptoms: [
+    "Soğuk startta metalik tıkırtı sesi",
+    "Motor arıza lambası",
+    "Uzun çalıştırma süresi (crank)",
+    "Rölantide titreşim",
+  ],
+
+  causes: [
+    "Hidrolik zincir gerdiricisinin gece boyunca yağ basıncını kaybetmesi",
+    "Kam mili ayarlayıcı (tone ring) aşınması",
+    "Düzensiz yağ değişimi",
+  ],
+
+  diagnostics: [
+    "OBD taraması (P001685 kontrolü)",
+    "Zincir gerginlik kontrolü",
+    "Kam/krank senkronizasyon testi",
+  ],
+
+  solutions: [
+    "Zincir, gerdirici ve kılavuz setinin komple değişimi",
+    "Kam mili ayarlayıcı (solenoid) değişimi",
+    "Gerekirse kam mili değişimi",
+  ],
+
+  requiredParts: [
+    "Timing Zinciri",
+    "Zincir Gerdiricisi",
+    "Kam Mili Ayarlayıcı Solenoidi",
+  ],
+
+  preventiveMaintenance: [
+    "Üreticinin onayladığı (MB-approved) yağı kullan",
+    "Yağ değişimlerini asla geciktirme",
+    "Soğuk startta ilk saniyelerdeki sesi ciddiye al",
+  ],
+
+  keywords: [
+    "zincir",
+    "m270",
+    "m274",
+    "tıkırtı sesi",
+    "kam ayarlayıcı",
+    "p001685",
+  ],
+
+  aliases: [
+    "zincir gerdiricisi arızası",
+    "kam ayarlayıcı arızası",
+    "m274 zincir sorunu",
+  ],
+
+  priority: 95,
+
+  estimatedCost: {
+    min: 12000,
+    max: 35000,
+    currency: "TRY",
+  },
+
+  repairTime: "5-8 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "timing-chain-thp",
+  ],
+},
+
+{
+  id: "timing-chain-thp",
+
+  slug: "ep6-thp-zincir-gerdirici-arizasi",
+
+  title: "Zincir Gerdiricisi Arızası (EP6/THP)",
+
+  shortDescription:
+    "Hidrolik zincir gerdiricisinin gece boyunca basıncını kaybetmesi, zincirin gevşemesine ve zamanla uzamasına yol açar.",
+
+  category: "Motor",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "ep6-thp",
+  ],
+
+  affectedEngines: [
+    "1.6 THP",
+    "EP6",
+  ],
+
+  affectedModels: [
+    "308",
+    "208",
+    "3008",
+    "508",
+  ],
+
+  obdCodes: [
+    "P0016",
+    "P0017",
+  ],
+
+  symptoms: [
+    "Soğuk startta zincir sesi (birkaç saniye sonra kaybolur)",
+    "Motor arıza lambası",
+    "Yakıt tüketiminde artış",
+    "Güç kaybı ve sarsıntı",
+  ],
+
+  causes: [
+    "Hidrolik gerdiricinin gece boyunca yağını boşaltması",
+    "Zincirin zamanla uzaması (özellikle 2012 öncesi üretim)",
+    "Düzensiz yağ değişimi",
+  ],
+
+  diagnostics: [
+    "Soğuk start sesi kontrolü",
+    "OBD taraması (P0016/P0017)",
+    "Uzun vadeli yakıt trim (LTFT) kontrolü",
+  ],
+
+  solutions: [
+    "Güncellenmiş zincir kiti (kılavuz, gerdirici, zincir) ile komple değişim",
+    "Kam/krank dişlisi aşınmışsa değişim",
+  ],
+
+  requiredParts: [
+    "Timing Zinciri",
+    "Zincir Gerdiricisi",
+    "Zincir Kılavuzları",
+  ],
+
+  preventiveMaintenance: [
+    "5W-30 önerilen yağı düzenli değiştir",
+    "Soğuk startta motoru hemen yüksek devirde zorlama",
+  ],
+
+  keywords: [
+    "thp",
+    "ep6",
+    "zincir",
+    "prince motor",
+    "gerdirici",
+  ],
+
+  aliases: [
+    "thp zincir arızası",
+    "ep6 zincir gerdirici sorunu",
+    "prince motor zincir sorunu",
+  ],
+
+  priority: 94,
+
+  estimatedCost: {
+    min: 9000,
+    max: 25000,
+    currency: "TRY",
+  },
+
+  repairTime: "4-6 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "timing-chain-mb",
+  ],
+},
+
+{
+  id: "oil-consumption",
+
+  slug: "toyota-yag-tuketimi-piston-segmani",
+
+  title: "Aşırı Yağ Tüketimi (Piston Segmanı)",
+
+  shortDescription:
+    "Piston segmanlarının tasarımı kaynaklı yağı yakması sonucu motor yağ seviyesi beklenenden hızlı düşer.",
+
+  category: "Motor",
+
+  severity: "Orta",
+
+  engineFamilies: [
+    "toyota-petrol",
+  ],
+
+  affectedEngines: [
+    "1ZR-FE",
+    "2ZR-FE",
+  ],
+
+  affectedModels: [
+    "Corolla",
+    "Yaris",
+    "Auris",
+  ],
+
+  obdCodes: [
+    "P0300",
+    "P0171",
+  ],
+
+  symptoms: [
+    "Yağ seviyesinin normalden hızlı düşmesi",
+    "Egzozdan hafif mavi duman",
+    "Yağ seviyesi uyarı lambası",
+    "Bazı durumlarda misfire",
+  ],
+
+  causes: [
+    "Piston segmanlarının yağ sıyırma performansının yetersizliği",
+    "Kısa mesafe kullanımına bağlı karbon birikimi",
+    "Motorun optimum çalışma sıcaklığına ulaşamaması",
+  ],
+
+  diagnostics: [
+    "Yağ tüketim testi (üretici prosedürüne göre)",
+    "Kompresyon testi",
+    "Boroskopla silindir içi görsel kontrol",
+  ],
+
+  solutions: [
+    "Güncellenmiş piston segman setiyle değişim (ağır vakalarda)",
+    "Düzenli otoyol sürüşü ile karbon temizliği",
+    "Yağ seviyesinin sık kontrolü ve gerektiğinde takviye",
+  ],
+
+  requiredParts: [
+    "Piston Segman Seti",
+    "Motor Yağı",
+  ],
+
+  preventiveMaintenance: [
+    "Yağ seviyesini her 1000 km'de bir kontrol et",
+    "Ara sıra uzun/otoyol sürüşü yap",
+    "Üreticinin önerdiği yağ tipini kullan",
+  ],
+
+  keywords: [
+    "yağ tüketimi",
+    "segman",
+    "mavi duman",
+    "1zr",
+    "2zr",
+  ],
+
+  aliases: [
+    "yağ yakma",
+    "piston segmanı arızası",
+    "aşırı yağ tüketimi",
+  ],
+
+  priority: 82,
+
+  estimatedCost: {
+    min: 8000,
+    max: 30000,
+    currency: "TRY",
+  },
+
+  repairTime: "8-12 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [],
+}
+
+];

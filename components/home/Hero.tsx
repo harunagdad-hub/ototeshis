@@ -42,11 +42,11 @@ export default function Hero() {
 
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 font-mono text-sm text-neutral-400">
             <div>
-              <div className="text-2xl font-semibold text-neutral-100">5</div>
+              <div className="text-2xl font-semibold text-neutral-100">11</div>
               Marka
             </div>
             <div>
-              <div className="text-2xl font-semibold text-neutral-100">10</div>
+              <div className="text-2xl font-semibold text-neutral-100">13</div>
               Kronik Arıza
             </div>
             <div>
