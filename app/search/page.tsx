@@ -39,12 +39,9 @@ function SearchPageInner() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Golf 7, EA288, P0401, EGR, Turbo..."
                 className="h-14 w-full rounded-2xl border border-white/10 bg-black/40 pl-12 pr-4 text-white outline-none transition focus:border-orange-500"
+                autoFocus
               />
             </div>
-
-            <button className="h-14 rounded-2xl bg-orange-500 px-8 font-semibold text-white transition hover:bg-orange-600">
-              Ara
-            </button>
 
           </div>
 

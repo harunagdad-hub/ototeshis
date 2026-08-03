@@ -1,7 +1,19 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import EngineSchematic from "./EngineSchematic";
 
 export default function Hero() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    router.push(`/search?q=${encodeURIComponent(query)}`);
+  }
+
   return (
     <section className="schematic-grid relative overflow-hidden bg-neutral-950">
       <div className="absolute inset-0">
@@ -27,9 +39,11 @@ export default function Hero() {
             ekranda gör.
           </p>
 
-          <form action="/search" method="GET" className="mt-8 flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:flex-row">
+          <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:flex-row">
             <input
               name="q"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               className="h-14 flex-1 rounded-xl border border-white/10 bg-neutral-950/60 px-5 font-mono text-sm text-neutral-100 outline-none placeholder:text-neutral-500"
               placeholder="Golf 7 1.6 TDI • P0401 • EA288..."
             />
