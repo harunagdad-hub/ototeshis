@@ -1,13 +1,13 @@
 import Hero from "@/components/home/Hero";
 import SearchBox from "@/components/home/SearchBox";
-import BrandGrid from "@/components/home/BrandGrid";
+import VehicleCategories from "@/components/home/VehicleCategories";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <SearchBox />
-      <BrandGrid />
+      <VehicleCategories />
     </>
   );
 }

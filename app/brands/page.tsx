@@ -1,22 +1,7 @@
 import Link from "next/link";
 import { manufacturers } from "@/data/database/manufacturers";
 import { models } from "@/data/database/models";
-
-const MONOGRAMS: Record<string, string> = {
-  volkswagen: "VW",
-  audi: "AU",
-  seat: "SE",
-  skoda: "ŠK",
-  bmw: "BMW",
-  renault: "RN",
-  ford: "FD",
-  mercedes: "MB",
-  toyota: "TY",
-  peugeot: "PG",
-  opel: "OP",
-  hyundai: "HY",
-  fiat: "FT",
-};
+import { getMonogram } from "@/lib/brandMonograms";
 
 export default function BrandsPage() {
   const availableBrands = manufacturers.filter((brand) =>
@@ -37,7 +22,7 @@ export default function BrandsPage() {
             className="group flex items-center gap-4 rounded-xl border border-white/10 bg-neutral-900 p-5 transition hover:border-orange-500 hover:bg-neutral-800"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/10 font-display text-sm font-bold text-orange-400">
-              {MONOGRAMS[brand.id] ?? brand.name.slice(0, 2).toUpperCase()}
+              {getMonogram(brand.id, brand.name)}
             </div>
 
             <span className="font-semibold text-neutral-100 group-hover:text-orange-400">
