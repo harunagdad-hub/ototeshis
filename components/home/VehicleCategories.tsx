@@ -25,7 +25,8 @@ export default function VehicleCategories() {
     .map((model) => {
       const brand = manufacturers.find((m) => m.id === model.manufacturerId);
       return { ...model, brandName: brand?.name ?? model.manufacturerId };
-    });
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "tr"));
 
   return (
     <section className="bg-neutral-950 py-20">
@@ -68,17 +69,17 @@ export default function VehicleCategories() {
                   href={`/brands/${model.manufacturerId}/${model.id}`}
                   className="group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-neutral-900 p-5 text-center transition hover:border-orange-500 hover:bg-neutral-800"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/10 font-display text-sm font-bold text-orange-400">
-                    {getMonogram(model.manufacturerId, model.brandName)}
-                  </div>
+                  <h3 className="font-display text-lg font-bold text-neutral-100 group-hover:text-orange-400">
+                    {model.name}
+                  </h3>
 
-                  <div>
-                    <h3 className="font-semibold text-neutral-100 group-hover:text-orange-400">
-                      {model.name}
-                    </h3>
-                    <p className="mt-0.5 text-xs text-neutral-500">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 py-1.5 pl-1.5 pr-3">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-500/15 font-display text-[10px] font-bold text-orange-400">
+                      {getMonogram(model.manufacturerId, model.brandName)}
+                    </div>
+                    <span className="text-xs text-neutral-400">
                       {model.brandName}
-                    </p>
+                    </span>
                   </div>
                 </Link>
               ))}
