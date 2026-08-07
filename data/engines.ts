@@ -656,4 +656,205 @@ export const engines = {
       years: "2010-...",
     },
   ],
+
+  "t-roc-1": [
+    {
+      id: "15-tsi",
+      name: "1.5 TSI",
+      code: "EA211 EVO",
+      fuel: "Benzin",
+      power: "150 PS",
+      years: "2017-...",
+    },
+    {
+      id: "20-tdi",
+      name: "2.0 TDI",
+      code: "EA288 EVO",
+      fuel: "Dizel",
+      power: "150 PS",
+      years: "2017-...",
+    },
+  ],
+
+  "q3-2": [
+    {
+      id: "35-tfsi",
+      name: "35 TFSI",
+      code: "EA211 EVO",
+      fuel: "Benzin",
+      power: "150 PS",
+      years: "2018-...",
+    },
+    {
+      id: "35-tdi",
+      name: "35 TDI",
+      code: "EA288 EVO",
+      fuel: "Dizel",
+      power: "150 PS",
+      years: "2018-...",
+    },
+  ],
+
+  f48: [
+    {
+      id: "18d",
+      name: "sDrive18d",
+      code: "B47",
+      fuel: "Dizel",
+      power: "150 PS",
+      years: "2015-2022",
+    },
+    {
+      id: "20d",
+      name: "xDrive20d",
+      code: "B47",
+      fuel: "Dizel",
+      power: "190 PS",
+      years: "2015-2022",
+    },
+  ],
+
+  "captur-1": [
+    {
+      id: "15-dci-90",
+      name: "1.5 dCi 90",
+      code: "K9K",
+      fuel: "Dizel",
+      power: "90 PS",
+      years: "2013-2019",
+    },
+  ],
+
+  "kuga-3": [
+    {
+      id: "15-ecoboost-150",
+      name: "1.5 EcoBoost 150",
+      code: "EcoBoost",
+      fuel: "Benzin",
+      power: "150 PS",
+      years: "2019-...",
+    },
+    {
+      id: "20-ecoblue-150",
+      name: "2.0 EcoBlue 150",
+      code: "EcoBlue",
+      fuel: "Dizel",
+      power: "150 PS",
+      years: "2019-...",
+    },
+  ],
+
+  h247: [
+    {
+      id: "gla200",
+      name: "GLA 200",
+      code: "M270",
+      fuel: "Benzin",
+      power: "163 PS",
+      years: "2020-...",
+    },
+    {
+      id: "gla200d",
+      name: "GLA 200d",
+      code: "OM651",
+      fuel: "Dizel",
+      power: "150 PS",
+      years: "2020-...",
+    },
+  ],
+
+  "c-hr-1": [
+    {
+      id: "12-turbo",
+      name: "1.2 Turbo",
+      code: "8NR-FTS",
+      fuel: "Benzin",
+      power: "116 PS",
+      years: "2016-2023",
+    },
+    {
+      id: "18-hybrid",
+      name: "1.8 Hybrid",
+      code: "2ZR-FXE",
+      fuel: "Hibrit",
+      power: "122 PS",
+      years: "2016-2023",
+    },
+  ],
+
+  "2008-2": [
+    {
+      id: "12-puretech",
+      name: "1.2 PureTech",
+      code: "EB2",
+      fuel: "Benzin",
+      power: "100-130 PS",
+      years: "2019-...",
+    },
+    {
+      id: "15-bluehdi",
+      name: "1.5 BlueHDi",
+      code: "DV6",
+      fuel: "Dizel",
+      power: "100-130 PS",
+      years: "2019-...",
+    },
+  ],
+
+  "mokka-1": [
+    {
+      id: "16-cdti-136",
+      name: "1.6 CDTI 136",
+      code: "CDTI",
+      fuel: "Dizel",
+      power: "136 PS",
+      years: "2012-2019",
+    },
+    {
+      id: "14-turbo",
+      name: "1.4 Turbo",
+      code: "A14NET",
+      fuel: "Benzin",
+      power: "140 PS",
+      years: "2012-2019",
+    },
+  ],
+
+  tl: [
+    {
+      id: "16-crdi-136",
+      name: "1.6 CRDi 136",
+      code: "CRDi",
+      fuel: "Dizel",
+      power: "136 PS",
+      years: "2015-2020",
+    },
+    {
+      id: "16-gdi",
+      name: "1.6 GDI",
+      code: "Gamma",
+      fuel: "Benzin",
+      power: "132 PS",
+      years: "2015-2020",
+    },
+  ],
+
+  "500x-1": [
+    {
+      id: "13-multijet-95",
+      name: "1.3 Multijet 95",
+      code: "Multijet",
+      fuel: "Dizel",
+      power: "95 PS",
+      years: "2015-...",
+    },
+    {
+      id: "16-e-torq",
+      name: "1.6 E-Torq",
+      code: "E-Torq",
+      fuel: "Benzin",
+      power: "110 PS",
+      years: "2015-...",
+    },
+  ],
 };

@@ -234,4 +234,92 @@ export const generations = {
       years: "2010-...",
     },
   ],
+
+  "t-roc": [
+    {
+      id: "t-roc-1",
+      name: "T-Roc (1. Nesil)",
+      years: "2017-...",
+    },
+  ],
+
+  q3: [
+    {
+      id: "q3-2",
+      name: "Q3 (2. Nesil)",
+      years: "2018-...",
+    },
+  ],
+
+  x1: [
+    {
+      id: "f48",
+      name: "X1 F48",
+      years: "2015-2022",
+    },
+  ],
+
+  captur: [
+    {
+      id: "captur-1",
+      name: "Captur (1. Nesil)",
+      years: "2013-2019",
+    },
+  ],
+
+  kuga: [
+    {
+      id: "kuga-3",
+      name: "Kuga (3. Nesil)",
+      years: "2019-...",
+    },
+  ],
+
+  gla: [
+    {
+      id: "h247",
+      name: "GLA H247",
+      years: "2020-...",
+    },
+  ],
+
+  "c-hr": [
+    {
+      id: "c-hr-1",
+      name: "C-HR (1. Nesil)",
+      years: "2016-2023",
+    },
+  ],
+
+  "2008": [
+    {
+      id: "2008-2",
+      name: "2008 (2. Nesil)",
+      years: "2019-...",
+    },
+  ],
+
+  mokka: [
+    {
+      id: "mokka-1",
+      name: "Mokka (1. Nesil)",
+      years: "2012-2019",
+    },
+  ],
+
+  tucson: [
+    {
+      id: "tl",
+      name: "Tucson TL",
+      years: "2015-2020",
+    },
+  ],
+
+  "500x": [
+    {
+      id: "500x-1",
+      name: "500X (1. Nesil)",
+      years: "2015-...",
+    },
+  ],
 };
