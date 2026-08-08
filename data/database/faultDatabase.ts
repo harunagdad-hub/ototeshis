@@ -1666,4 +1666,221 @@ export const faultDatabase: FaultDatabase[] = [
   ],
 }
 
+{
+  id: "dsg-mechatronic",
+
+  slug: "dsg-mekatronik-unitesi-arizasi",
+
+  title: "DSG Mekatronik Ünitesi Arızası",
+
+  shortDescription:
+    "DSG şanzımanın elektronik/hidrolik kontrol ünitesindeki basınç kaybı veya devre arızası, vitesin aniden boşa düşmesine yol açabilir.",
+
+  category: "Şanzıman",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "ea211",
+    "ea288",
+    "ea888-gen3",
+  ],
+
+  affectedEngines: [
+    "1.4 TSI",
+    "1.5 TSI",
+    "1.6 TDI",
+    "2.0 TDI",
+    "2.0 TSI",
+  ],
+
+  affectedModels: [
+    "Golf",
+    "Passat",
+    "A3",
+    "T-Roc",
+    "Q3",
+  ],
+
+  obdCodes: [
+    "P17BF",
+    "P189C",
+    "P0841",
+  ],
+
+  symptoms: [
+    "Gösterge panelinde anahtar (İngiliz anahtarı) uyarı ışığı",
+    "Vites göstergesindeki harflerin (PRNDS) yanıp sönmesi",
+    "Aracın sürüş sırasında aniden boşa düşmesi",
+    "Vites geçişlerinde gecikme veya sertlik",
+    "Bazı viteslerin (özellikle tek sayılı) devreye girmemesi",
+  ],
+
+  causes: [
+    "Mekatronik ünitenin alüminyum gövdesinin yüksek hidrolik basınç altında zamanla çatlaması",
+    "Basınç akümülatöründe (tüp) patlama",
+    "Solenoid valflerin aşınıp yapışması",
+    "Düşük akü voltajı nedeniyle kontrol ünitesinde hatalı sinyal",
+  ],
+
+  diagnostics: [
+    "OBD taraması (P17BF/P189C/P0841 kontrolü)",
+    "Akü voltajı ve şarj sistemi kontrolü",
+    "Mekatronik basınç testi",
+    "Canlı veri ile solenoid tepki kontrolü",
+  ],
+
+  solutions: [
+    "Mekatronik ünitenin yenilenmesi veya değişimi",
+    "Basınç akümülatörünün değişimi",
+    "Temel ayarların (basic settings) yeniden yapılması",
+    "Akü/şarj sistemi sorunluysa önce onun giderilmesi",
+  ],
+
+  requiredParts: [
+    "Mekatronik Ünite",
+    "Basınç Akümülatörü",
+    "DSG Yağı ve Filtresi",
+  ],
+
+  preventiveMaintenance: [
+    "DSG yağını üreticinin önerdiği aralıkta (40-80.000 km) değiştir",
+    "Anahtar/vites uyarı ışığını asla görmezden gelme",
+    "Akünün sağlıklı olduğundan emin ol",
+  ],
+
+  keywords: [
+    "dsg",
+    "mekatronik",
+    "vites boşa düşme",
+    "anahtar lambası",
+    "dq200",
+    "prnds",
+  ],
+
+  aliases: [
+    "dsg mekatronik arızası",
+    "şanzıman boşa düşmesi",
+    "dsg kontrol ünitesi arızası",
+  ],
+
+  priority: 96,
+
+  estimatedCost: {
+    min: 15000,
+    max: 45000,
+    currency: "TRY",
+  },
+
+  repairTime: "4-8 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "dsg-clutch-judder",
+  ],
+},
+
+{
+  id: "dsg-clutch-judder",
+
+  slug: "dsg-kavrama-balatasi-titremesi",
+
+  title: "DSG Kavrama Balatası Titremesi (Judder)",
+
+  shortDescription:
+    "Kuru kavramalı DQ200 DSG'de balata aşınması, düşük hızda kalkışta veya trafikte belirgin bir titreşime/sarsıntıya yol açar.",
+
+  category: "Şanzıman",
+
+  severity: "Orta",
+
+  engineFamilies: [
+    "ea211",
+    "ea288",
+  ],
+
+  affectedEngines: [
+    "1.4 TSI",
+    "1.6 TDI",
+  ],
+
+  affectedModels: [
+    "Golf",
+    "Polo",
+    "A3",
+  ],
+
+  obdCodes: [
+    "P173D",
+    "P072C",
+  ],
+
+  symptoms: [
+    "Trafik ışığından kalkışta veya yoğun trafikte 15-50 km/s arası titreşim",
+    "Debriyaj kaymasına benzer his",
+    "Gaza basınca gecikmeli tepki",
+    "Zamanla titremenin sıklaşması",
+  ],
+
+  causes: [
+    "Kuru kavrama balatalarının zamanla aşınması",
+    "Solenoid valflerin kavrama basıncını hatalı yönetmesi",
+    "Sık şehir içi/trafik kullanımının balatayı yıpratması",
+  ],
+
+  diagnostics: [
+    "Düşük hızda test sürüşü ile titreşim gözlemi",
+    "OBD taraması (P173D/P072C kontrolü)",
+    "Kavrama adaptasyon değerlerinin kontrolü",
+  ],
+
+  solutions: [
+    "Kavrama balata setinin değişimi",
+    "Mekatronik adaptasyonunun yeniden yapılması",
+    "Gerekirse solenoid valf değişimi",
+  ],
+
+  requiredParts: [
+    "Kavrama Balata Seti",
+    "Solenoid Valf",
+  ],
+
+  preventiveMaintenance: [
+    "Yoğun trafikte ani gaz-fren değil yumuşak sürüş tercih et",
+    "DSG yağ değişimlerini aksatma",
+    "İlk titreşim belirtisinde erken teşhis yaptır",
+  ],
+
+  keywords: [
+    "dsg titreme",
+    "judder",
+    "kavrama balatası",
+    "dq200",
+    "kalkışta sarsıntı",
+  ],
+
+  aliases: [
+    "dsg sarsıntısı",
+    "kavrama titremesi",
+    "debriyaj balata aşınması",
+  ],
+
+  priority: 85,
+
+  estimatedCost: {
+    min: 8000,
+    max: 20000,
+    currency: "TRY",
+  },
+
+  repairTime: "3-5 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "dsg-mechatronic",
+  ],
+}
+
 ];

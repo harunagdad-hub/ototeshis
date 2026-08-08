@@ -39,7 +39,9 @@ description:"Yeni nesil TSI motor ailesi.",
 commonFaults:[
 "wastegate",
 "water-pump",
-"thermostat"
+"thermostat",
+"dsg-mechatronic",
+"dsg-clutch-judder"
 ]
 
 },
@@ -62,7 +64,9 @@ commonFaults:[
 "dpf",
 "turbo",
 "adblue",
-"maf"
+"maf",
+"dsg-mechatronic",
+"dsg-clutch-judder"
 ]
 
 },
@@ -84,7 +88,8 @@ commonFaults:[
 "oil-consumption",
 "water-pump",
 "pcv",
-"carbon-build-up"
+"carbon-build-up",
+"dsg-mechatronic"
 ]
 
 },
