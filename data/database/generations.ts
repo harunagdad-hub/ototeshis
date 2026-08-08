@@ -217,6 +217,83 @@ id:"doblo-3",
 modelId:"doblo",
 name:"Doblo (3. Nesil)",
 years:"2010-"
+},
+
+{
+id:"t-roc-1",
+modelId:"t-roc",
+name:"T-Roc (1. Nesil)",
+years:"2017-"
+},
+
+{
+id:"q3-2",
+modelId:"q3",
+name:"Q3 (2. Nesil)",
+years:"2018-"
+},
+
+{
+id:"f48",
+modelId:"x1",
+name:"X1 F48",
+years:"2015-2022"
+},
+
+{
+id:"captur-1",
+modelId:"captur",
+name:"Captur (1. Nesil)",
+years:"2013-2019"
+},
+
+{
+id:"kuga-3",
+modelId:"kuga",
+name:"Kuga (3. Nesil)",
+years:"2019-"
+},
+
+{
+id:"h247",
+modelId:"gla",
+name:"GLA H247",
+years:"2020-"
+},
+
+{
+id:"c-hr-1",
+modelId:"c-hr",
+name:"C-HR (1. Nesil)",
+years:"2016-2023"
+},
+
+{
+id:"2008-2",
+modelId:"2008",
+name:"2008 (2. Nesil)",
+years:"2019-"
+},
+
+{
+id:"mokka-1",
+modelId:"mokka",
+name:"Mokka (1. Nesil)",
+years:"2012-2019"
+},
+
+{
+id:"tl",
+modelId:"tucson",
+name:"Tucson TL",
+years:"2015-2020"
+},
+
+{
+id:"500x-1",
+modelId:"500x",
+name:"500X (1. Nesil)",
+years:"2015-"
 }
 
 ];
