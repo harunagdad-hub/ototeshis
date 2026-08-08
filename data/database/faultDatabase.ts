@@ -1452,6 +1452,218 @@ export const faultDatabase: FaultDatabase[] = [
   difficulty: "Zor",
 
   relatedFaults: [],
+},
+
+{
+  id: "water-pump",
+
+  slug: "devir-daim-su-pompasi-arizasi",
+
+  title: "Devir Daim (Su Pompası) Arızası",
+
+  shortDescription:
+    "Su pompası ve termostat muhafazasındaki plastik gövdenin ısı çevrimleriyle çatlaması sonucu soğutucu sıvı sızıntısı ve aşırı ısınma oluşur.",
+
+  category: "Soğutma",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "ea211",
+    "ea288",
+    "ea888-gen3",
+  ],
+
+  affectedEngines: [
+    "1.4 TSI",
+    "1.5 TSI",
+    "2.0 TDI",
+    "2.0 TSI",
+  ],
+
+  affectedModels: [
+    "Golf",
+    "Passat",
+    "A3",
+    "A4",
+    "T-Roc",
+    "Q3",
+  ],
+
+  obdCodes: [
+    "P0217",
+    "P0128",
+  ],
+
+  symptoms: [
+    "Soğutucu sıvı seviyesinin günler içinde yavaşça düşmesi",
+    "Aralıklı düşük soğutucu sıvı uyarısı",
+    "Motor önünde tatlımsı soğutucu sıvı kokusu",
+    "Su pompası çevresinde pembe/turuncu leke",
+    "Aşırı ısınma göstergesi",
+  ],
+
+  causes: [
+    "Su pompası ve termostat muhafazasının plastik gövdesinin tekrarlanan ısı çevrimleriyle çatlaması",
+    "Conta ve contaların zamanla sertleşip sızdırması",
+    "Elektrikli pompa motorunun yıpranması",
+  ],
+
+  diagnostics: [
+    "Soğutma sistemi basınç testi",
+    "Pompa/termostat gövdesi çevresinde görsel sızıntı kontrolü",
+    "OBD taraması (P0217/P0128 kontrolü)",
+  ],
+
+  solutions: [
+    "Su pompası + termostat muhafazasının güncellenmiş komple kit ile değişimi",
+    "Soğutma sistemini boşaltıp doldurma ve havasını alma",
+  ],
+
+  requiredParts: [
+    "Su Pompası",
+    "Termostat Muhafazası",
+    "Soğutucu Sıvı",
+  ],
+
+  preventiveMaintenance: [
+    "Soğutucu sıvı seviyesini düzenli kontrol et",
+    "Düşük soğutucu sıvı uyarısını asla görmezden gelme",
+    "60-80.000 km civarında güncellenmiş gövde kitiyle önleyici değişim düşün",
+  ],
+
+  keywords: [
+    "devir daim",
+    "su pompası",
+    "soğutucu sıvı kaçağı",
+    "aşırı ısınma",
+    "termostat",
+  ],
+
+  aliases: [
+    "devir daim arızası",
+    "su pompası arızası",
+    "soğutma sistemi kaçağı",
+  ],
+
+  priority: 93,
+
+  estimatedCost: {
+    min: 4000,
+    max: 15000,
+    currency: "TRY",
+  },
+
+  repairTime: "2-4 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "carbon-build-up",
+  ],
+},
+
+{
+  id: "carbon-build-up",
+
+  slug: "emme-supabi-karbon-birikimi",
+
+  title: "Emme Supabı Karbon Birikimi (TSI)",
+
+  shortDescription:
+    "Direkt enjeksiyonlu TSI motorlarda yakıtın emme supaplarını yıkamaması sonucu zamanla karbon birikip hava akışını kısıtlar.",
+
+  category: "Motor",
+
+  severity: "Orta",
+
+  engineFamilies: [
+    "ea211",
+    "ea888-gen3",
+  ],
+
+  affectedEngines: [
+    "1.4 TSI",
+    "2.0 TSI",
+    "2.0 TSI GTI",
+  ],
+
+  affectedModels: [
+    "Golf",
+    "A3",
+    "T-Roc",
+    "Q3",
+  ],
+
+  obdCodes: [
+    "P0300",
+    "P0301",
+  ],
+
+  symptoms: [
+    "Özellikle soğuk startta rölanti sarsıntısı",
+    "Gaza basınca tereddüt/duraksama",
+    "Güç kaybı hissi",
+    "Aralıklı misfire (ateşleme boşluğu) kodları",
+    "Yakıt tüketiminde artış",
+  ],
+
+  causes: [
+    "Direkt enjeksiyonda yakıtın emme supaplarının arkasından hiç geçmemesi (yıkama etkisi olmaması)",
+    "Karter havalandırma (PCV) sisteminden gelen yağ buharının supaplara yapışıp sertleşmesi",
+    "Kısa mesafe/şehir içi kullanımın birikimi hızlandırması",
+  ],
+
+  diagnostics: [
+    "Boroskop ile emme supaplarının görsel kontrolü",
+    "Silindir denge/kompresyon testi",
+    "OBD taraması (misfire kodları)",
+  ],
+
+  solutions: [
+    "Ceviz kabuğu (walnut blasting) ile supap temizliği",
+    "Emme manifoldu sökülerek manuel karbon temizliği",
+  ],
+
+  requiredParts: [
+    "Emme Manifoldu Contası",
+  ],
+
+  preventiveMaintenance: [
+    "Sadece kısa mesafe kullanmaktan kaçın, ara sıra otoyolda yüksek devir yaptır",
+    "60-80.000 km'de önleyici emme supabı temizliği yaptır",
+    "Düzenli yağ değişimi ile PCV sisteminden gelen yağ buharını azalt",
+  ],
+
+  keywords: [
+    "karbon birikimi",
+    "tsi",
+    "direkt enjeksiyon",
+    "rölanti sarsıntısı",
+    "misfire",
+  ],
+
+  aliases: [
+    "emme supabı kirlenmesi",
+    "karbon temizliği",
+    "valve karbonlanması",
+  ],
+
+  priority: 78,
+
+  estimatedCost: {
+    min: 3000,
+    max: 8000,
+    currency: "TRY",
+  },
+
+  repairTime: "3-5 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "water-pump",
+  ],
 }
 
 ];
