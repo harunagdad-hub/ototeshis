@@ -5,6 +5,17 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Search, CarFront, Wrench, Cpu } from "lucide-react";
 import { searchDatabase } from "@/lib/search";
+import { manufacturers } from "@/data/database/manufacturers";
+import { models } from "@/data/database/models";
+import { faultDatabase } from "@/data/database/faultDatabase";
+import { obdCodes } from "@/data/database/obdCodes";
+
+const brandCount = manufacturers.filter((brand) =>
+  models.some((model) => model.manufacturerId === brand.id)
+).length;
+const modelCount = models.length;
+const faultCount = faultDatabase.length;
+const obdCount = obdCodes.length;
 
 function SearchPageInner() {
   const params = useSearchParams();
@@ -62,13 +73,13 @@ function SearchPageInner() {
         {/* İstatistikler */}
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
 
-          <Stat icon={<CarFront className="h-5 w-5" />} value="11" label="Marka" />
+          <Stat icon={<CarFront className="h-5 w-5" />} value={String(brandCount)} label="Marka" />
 
-          <Stat icon={<CarFront className="h-5 w-5" />} value="26" label="Model" />
+          <Stat icon={<CarFront className="h-5 w-5" />} value={String(modelCount)} label="Model" />
 
-          <Stat icon={<Wrench className="h-5 w-5" />} value="13" label="Arıza" />
+          <Stat icon={<Wrench className="h-5 w-5" />} value={String(faultCount)} label="Arıza" />
 
-          <Stat icon={<Cpu className="h-5 w-5" />} value="2" label="OBD Kodu" />
+          <Stat icon={<Cpu className="h-5 w-5" />} value={String(obdCount)} label="OBD Kodu" />
 
         </div>
 

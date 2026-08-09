@@ -4,6 +4,16 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import EngineSchematic from "./EngineSchematic";
+import { manufacturers } from "@/data/database/manufacturers";
+import { models } from "@/data/database/models";
+import { faultDatabase } from "@/data/database/faultDatabase";
+import { obdCodes } from "@/data/database/obdCodes";
+
+const brandCount = manufacturers.filter((brand) =>
+  models.some((model) => model.manufacturerId === brand.id)
+).length;
+const faultCount = faultDatabase.length;
+const obdCount = obdCodes.length;
 
 export default function Hero() {
   const router = useRouter();
@@ -56,15 +66,15 @@ export default function Hero() {
 
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 font-mono text-sm text-neutral-400">
             <div>
-              <div className="text-2xl font-semibold text-neutral-100">11</div>
+              <div className="text-2xl font-semibold text-neutral-100">{brandCount}</div>
               Marka
             </div>
             <div>
-              <div className="text-2xl font-semibold text-neutral-100">13</div>
+              <div className="text-2xl font-semibold text-neutral-100">{faultCount}</div>
               Kronik Arıza
             </div>
             <div>
-              <div className="text-2xl font-semibold text-neutral-100">2</div>
+              <div className="text-2xl font-semibold text-neutral-100">{obdCount}</div>
               OBD Kod Sayfası
             </div>
           </div>
