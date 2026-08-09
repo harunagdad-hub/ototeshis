@@ -1664,7 +1664,7 @@ export const faultDatabase: FaultDatabase[] = [
   relatedFaults: [
     "water-pump",
   ],
-}
+},
 
 {
   id: "dsg-mechatronic",
