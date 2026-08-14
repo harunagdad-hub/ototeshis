@@ -352,7 +352,8 @@ description:"Opel'in 1.3-2.0 litrelik common rail dizel motor ailesi.",
 commonFaults:[
 "egr",
 "dpf",
-"turbo"
+"turbo",
+"timing-chain-cdti"
 ]
 
 },
@@ -372,7 +373,8 @@ description:"Hyundai-Kia grubunun 1.4-2.0 litrelik common rail dizel motor ailes
 
 commonFaults:[
 "egr",
-"dpf"
+"dpf",
+"hesitation-crdi"
 ]
 
 },
@@ -393,7 +395,8 @@ description:"Fiat'ın 1.3-2.0 litrelik common rail dizel motor ailesi. Birçok m
 commonFaults:[
 "egr",
 "dpf",
-"turbo"
+"turbo",
+"turbo-actuator-fiat"
 ]
 
 }

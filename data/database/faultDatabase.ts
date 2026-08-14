@@ -1881,6 +1881,306 @@ export const faultDatabase: FaultDatabase[] = [
   relatedFaults: [
     "dsg-mechatronic",
   ],
+},
+
+{
+  id: "turbo-actuator-fiat",
+
+  slug: "multijet-turbo-aktuator-arizasi",
+
+  title: "Turbo Aktüatör Arızası (MultiJet)",
+
+  shortDescription:
+    "Değişken geometrili turbonun aktüatör mili kurum birikimi veya su kaçağı nedeniyle sıkışır, motor limp mode'a (acil durum moduna) düşer.",
+
+  category: "Turbo",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "multijet",
+  ],
+
+  affectedEngines: [
+    "1.3 Multijet",
+    "1.6 Multijet",
+  ],
+
+  affectedModels: [
+    "Egea",
+    "Doblo",
+    "500X",
+  ],
+
+  obdCodes: [
+    "P0234",
+    "P2563",
+  ],
+
+  symptoms: [
+    "2500-3000 devirde ani güç kaybı ve acil durum (limp) moduna geçiş",
+    "Motor arıza lambası",
+    "Egzoz sesinde değişim",
+    "Yakıt tüketiminde belirgin artış",
+    "Islık/emme sesinde farklılaşma",
+  ],
+
+  causes: [
+    "Aktüatör milinin kurum birikimiyle yuvasında sıkışması",
+    "Aktüatör veya pozisyon sensörüne su kaçağı",
+    "Elektronik aktüatörde devre arızası",
+  ],
+
+  diagnostics: [
+    "Aktüatör kolunun elle hareket testi",
+    "Vakum tutma testi",
+    "OBD taraması (P0234/P2563 kontrolü)",
+  ],
+
+  solutions: [
+    "Sıkışan aktüatör milinin temizlenip serbest bırakılması",
+    "Elektronik arıza varsa aktüatör değişimi",
+    "Su hasarı varsa pozisyon sensörü değişimi",
+  ],
+
+  requiredParts: [
+    "Turbo Aktüatörü",
+    "Pozisyon Sensörü",
+  ],
+
+  preventiveMaintenance: [
+    "Aktüatör bölgesine su girişini önle (motor üstü temizliğine dikkat)",
+    "Periyodik aktüatör kolu hareketini kontrol ettir",
+    "Kaliteli yakıt kullan",
+  ],
+
+  keywords: [
+    "multijet",
+    "turbo aktüatör",
+    "limp mode",
+    "overboost",
+    "wastegate",
+  ],
+
+  aliases: [
+    "turbo aktüatör arızası",
+    "wastegate sıkışması",
+    "acil durum modu",
+  ],
+
+  priority: 90,
+
+  estimatedCost: {
+    min: 3000,
+    max: 12000,
+    currency: "TRY",
+  },
+
+  repairTime: "1-3 Saat",
+
+  difficulty: "Orta",
+
+  relatedFaults: [
+    "turbo",
+  ],
+},
+
+{
+  id: "timing-chain-cdti",
+
+  slug: "cdti-zincir-gerdiricisi-yag-bosalmasi",
+
+  title: "Zincir Gerdiricisi Yağ Boşalması (1.6 CDTI 'Whisper Diesel')",
+
+  shortDescription:
+    "Hidrolik zincir gerdiricisinin motor kapalıyken yağını boşaltması, soğuk startta karakteristik bir zincir sesine ve zamanla zincir aşınmasına yol açar.",
+
+  category: "Motor",
+
+  severity: "Yüksek",
+
+  engineFamilies: [
+    "cdti",
+  ],
+
+  affectedEngines: [
+    "1.6 CDTI",
+  ],
+
+  affectedModels: [
+    "Astra",
+    "Mokka",
+    "Corsa",
+  ],
+
+  obdCodes: [
+    "P0016",
+    "P0017",
+  ],
+
+  symptoms: [
+    "Soğuk startta 1-2 saniye süren metalik zincir sesi",
+    "Sesin zamanla uzaması ve sıklaşması",
+    "İleri aşamada motor arıza lambası",
+    "Ciddi vakalarda zincir kılavuzu parçalarının yağ pompasını tıkaması",
+  ],
+
+  causes: [
+    "Orijinal gerdiricide yağı tutan bir conta/rezervuar bulunmaması",
+    "Motor kapalıyken yağın gerdiriciden boşalması",
+    "Yeniden çalıştırmada birkaç saniye boyunca yetersiz gerdirme basıncı",
+  ],
+
+  diagnostics: [
+    "Soğuk start sesi kontrolü",
+    "Güncellenmiş conta/rezervuar plakasının takılı olup olmadığının kontrolü",
+    "Zincir aşınma/uzama görsel kontrolü",
+  ],
+
+  solutions: [
+    "Gerdirici ile blok arasına güncellenmiş rezervuar contası takılması",
+    "Zincir zaten uzamışsa komple zincir kiti değişimi (sadece gerdirici değişimi yetersiz kalır)",
+  ],
+
+  requiredParts: [
+    "Zincir Gerdiricisi",
+    "Güncellenmiş Rezervuar Contası",
+    "Timing Zinciri Seti (gerekirse)",
+  ],
+
+  preventiveMaintenance: [
+    "Üreticinin belirttiği tam sentetik yağı (Dexos2 veya eşdeğeri) kullan",
+    "Yağ değişim aralığını 10.000 km/yılda bire indir",
+    "Sesi ilk duyduğunda erken müdahale ettir",
+  ],
+
+  keywords: [
+    "whisper diesel",
+    "cdti",
+    "zincir sesi",
+    "soğuk start",
+    "gerdirici",
+  ],
+
+  aliases: [
+    "cdti zincir sesi",
+    "whisper diesel zincir arızası",
+    "soğuk start rattle",
+  ],
+
+  priority: 92,
+
+  estimatedCost: {
+    min: 8000,
+    max: 25000,
+    currency: "TRY",
+  },
+
+  repairTime: "4-8 Saat",
+
+  difficulty: "Zor",
+
+  relatedFaults: [
+    "turbo",
+  ],
+},
+
+{
+  id: "hesitation-crdi",
+
+  slug: "crdi-hizlanirken-duraksama-arizasi",
+
+  title: "Hızlanırken Duraksama (Hesitation) Arızası (CRDi)",
+
+  shortDescription:
+    "Elektronik EGR valfi kontrolündeki kalibrasyon sorunu, hafif yükte gaza basılınca motorun duraksamasına/tekleme hissine yol açar.",
+
+  category: "Motor",
+
+  severity: "Orta",
+
+  engineFamilies: [
+    "crdi",
+  ],
+
+  affectedEngines: [
+    "1.6 CRDi",
+  ],
+
+  affectedModels: [
+    "i20",
+    "i30",
+    "Tucson",
+  ],
+
+  obdCodes: [
+    "P0087",
+    "P0401",
+  ],
+
+  symptoms: [
+    "3. ve 6. vites arası hafif yükte gaza basınca duraksama",
+    "Yokuşta hızı korumak için gaza sonuna kadar basma ihtiyacı",
+    "Yumuşak sürüşte belirtinin daha belirgin olması",
+    "Klima açıkken belirtinin azalması (karakteristik bir işaret)",
+  ],
+
+  causes: [
+    "Elektronik EGR valfinin yazılım kalibrasyonundaki tutarsızlık",
+    "Enjektör adaptasyon değerlerinin kaymış olması",
+    "ECU'nun hafif yükte yakıt/EGR dengesini yanlış yönetmesi",
+  ],
+
+  diagnostics: [
+    "Hafif gazla test sürüşünde belirtinin yeniden oluşturulması",
+    "Güncel ECU yazılımı/servis kampanyası kontrolü",
+    "Enjektör adaptasyon değerlerinin okunması",
+  ],
+
+  solutions: [
+    "Yetkili serviste güncel ECU yazılım güncellemesi",
+    "EGR valfinin temizlenmesi veya değişimi",
+    "Enjektör adaptasyon değerlerinin sıfırlanması",
+  ],
+
+  requiredParts: [
+    "EGR Valfi (gerekirse)",
+  ],
+
+  preventiveMaintenance: [
+    "Yetkili serviste periyodik yazılım güncellemelerini takip et",
+    "EGR valfini düzenli temizlet",
+  ],
+
+  keywords: [
+    "duraksama",
+    "hesitation",
+    "gaz tepkisi",
+    "crdi",
+    "egr yazılımı",
+  ],
+
+  aliases: [
+    "hızlanma duraksaması",
+    "gaza basınca tekleme",
+    "crdi hesitation arızası",
+  ],
+
+  priority: 75,
+
+  estimatedCost: {
+    min: 1500,
+    max: 6000,
+    currency: "TRY",
+  },
+
+  repairTime: "1-3 Saat",
+
+  difficulty: "Kolay",
+
+  relatedFaults: [
+    "egr",
+  ],
 }
 
 ];
