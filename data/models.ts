@@ -1,182 +1,72 @@
 export const models = {
   volkswagen: [
-    {
-      id: "golf",
-      name: "Golf",
-    },
-    {
-      id: "passat",
-      name: "Passat",
-    },
-    {
-      id: "polo",
-      name: "Polo",
-    },
-    {
-      id: "tiguan",
-      name: "Tiguan",
-    },
-    {
-      id: "caddy",
-      name: "Caddy",
-    },
-    {
-      id: "transporter",
-      name: "Transporter",
-    },
-    {
-      id: "t-roc",
-      name: "T-Roc",
-    },
+    { id: "golf", name: "Golf" },
+    { id: "passat", name: "Passat" },
+    { id: "polo", name: "Polo" },
+    { id: "tiguan", name: "Tiguan" },
+    { id: "caddy", name: "Caddy" },
+    { id: "transporter", name: "Transporter" },
+    { id: "t-roc", name: "T-Roc" },
+    { id: "jetta", name: "Jetta" },
   ],
-
   audi: [
-    {
-      id: "a3",
-      name: "A3",
-    },
-    {
-      id: "a4",
-      name: "A4",
-    },
-    {
-      id: "q3",
-      name: "Q3",
-    },
+    { id: "a3", name: "A3" },
+    { id: "a4", name: "A4" },
+    { id: "q3", name: "Q3" },
+    { id: "a6", name: "A6" },
   ],
-
   bmw: [
-    {
-      id: "3-serisi",
-      name: "3 Serisi",
-    },
-    {
-      id: "5-serisi",
-      name: "5 Serisi",
-    },
-    {
-      id: "x1",
-      name: "X1",
-    },
+    { id: "3-serisi", name: "3 Serisi" },
+    { id: "5-serisi", name: "5 Serisi" },
+    { id: "x1", name: "X1" },
+    { id: "1-serisi", name: "1 Serisi" },
   ],
-
   renault: [
-    {
-      id: "clio",
-      name: "Clio",
-    },
-    {
-      id: "megane",
-      name: "Megane",
-    },
-    {
-      id: "captur",
-      name: "Captur",
-    },
+    { id: "clio", name: "Clio" },
+    { id: "megane", name: "Megane" },
+    { id: "captur", name: "Captur" },
+    { id: "fluence", name: "Fluence" },
   ],
-
   ford: [
-    {
-      id: "focus",
-      name: "Focus",
-    },
-    {
-      id: "fiesta",
-      name: "Fiesta",
-    },
-    {
-      id: "kuga",
-      name: "Kuga",
-    },
+    { id: "focus", name: "Focus" },
+    { id: "fiesta", name: "Fiesta" },
+    { id: "kuga", name: "Kuga" },
+    { id: "mondeo", name: "Mondeo" },
   ],
-
   mercedes: [
-    {
-      id: "c-serisi",
-      name: "C Serisi",
-    },
-    {
-      id: "e-serisi",
-      name: "E Serisi",
-    },
-    {
-      id: "gla",
-      name: "GLA",
-    },
+    { id: "c-serisi", name: "C Serisi" },
+    { id: "e-serisi", name: "E Serisi" },
+    { id: "gla", name: "GLA" },
+    { id: "a-serisi", name: "A Serisi" },
   ],
-
   toyota: [
-    {
-      id: "corolla",
-      name: "Corolla",
-    },
-    {
-      id: "yaris",
-      name: "Yaris",
-    },
-    {
-      id: "c-hr",
-      name: "C-HR",
-    },
+    { id: "corolla", name: "Corolla" },
+    { id: "yaris", name: "Yaris" },
+    { id: "c-hr", name: "C-HR" },
+    { id: "avensis", name: "Avensis" },
   ],
-
   peugeot: [
-    {
-      id: "308",
-      name: "308",
-    },
-    {
-      id: "208",
-      name: "208",
-    },
-    {
-      id: "2008",
-      name: "2008",
-    },
+    { id: "308", name: "308" },
+    { id: "208", name: "208" },
+    { id: "2008", name: "2008" },
+    { id: "508", name: "508" },
   ],
-
   opel: [
-    {
-      id: "astra",
-      name: "Astra",
-    },
-    {
-      id: "corsa",
-      name: "Corsa",
-    },
-    {
-      id: "mokka",
-      name: "Mokka",
-    },
+    { id: "astra", name: "Astra" },
+    { id: "corsa", name: "Corsa" },
+    { id: "mokka", name: "Mokka" },
+    { id: "insignia", name: "Insignia" },
   ],
-
   hyundai: [
-    {
-      id: "i20",
-      name: "i20",
-    },
-    {
-      id: "i30",
-      name: "i30",
-    },
-    {
-      id: "tucson",
-      name: "Tucson",
-    },
+    { id: "i20", name: "i20" },
+    { id: "i30", name: "i30" },
+    { id: "tucson", name: "Tucson" },
+    { id: "elantra", name: "Elantra" },
   ],
-
   fiat: [
-    {
-      id: "egea",
-      name: "Egea",
-    },
-    {
-      id: "doblo",
-      name: "Doblo",
-    },
-    {
-      id: "500x",
-      name: "500X",
-    },
+    { id: "egea", name: "Egea" },
+    { id: "doblo", name: "Doblo" },
+    { id: "500x", name: "500X" },
+    { id: "linea", name: "Linea" },
   ],
 };

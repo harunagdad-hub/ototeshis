@@ -2,298 +2,58 @@ import { Generation } from "@/types/generation";
 
 export const generations: Generation[] = [
 
-{
-id:"golf-5",
-modelId:"golf",
-name:"Golf V",
-years:"2003-2008"
-},
-
-{
-id:"golf-6",
-modelId:"golf",
-name:"Golf VI",
-years:"2008-2012"
-},
-
-{
-id:"golf-7",
-modelId:"golf",
-name:"Golf VII",
-years:"2012-2020"
-},
-
-{
-id:"golf-8",
-modelId:"golf",
-name:"Golf VIII",
-years:"2020-"
-},
-
-{
-id:"a3-8v",
-modelId:"a3",
-name:"A3 8V",
-years:"2012-2020"
-},
-
-{
-id:"a4-b8",
-modelId:"a4",
-name:"A4 B8",
-years:"2008-2015"
-},
-
-{
-id:"a4-b9",
-modelId:"a4",
-name:"A4 B9",
-years:"2015-"
-},
-
-{
-id:"f30",
-modelId:"3-serisi",
-name:"3 Serisi F30",
-years:"2012-2019"
-},
-
-{
-id:"f10",
-modelId:"5-serisi",
-name:"5 Serisi F10",
-years:"2010-2017"
-},
-
-{
-id:"clio-4",
-modelId:"clio",
-name:"Clio IV",
-years:"2012-2019"
-},
-
-{
-id:"clio-5",
-modelId:"clio",
-name:"Clio V",
-years:"2019-"
-},
-
-{
-id:"megane-3",
-modelId:"megane",
-name:"Megane III",
-years:"2008-2016"
-},
-
-{
-id:"megane-4",
-modelId:"megane",
-name:"Megane IV",
-years:"2016-2022"
-},
-
-{
-id:"focus-mk3",
-modelId:"focus",
-name:"Focus Mk3",
-years:"2011-2018"
-},
-
-{
-id:"focus-mk4",
-modelId:"focus",
-name:"Focus Mk4",
-years:"2018-"
-},
-
-{
-id:"fiesta-mk7",
-modelId:"fiesta",
-name:"Fiesta Mk7",
-years:"2008-2017"
-},
-
-{
-id:"fiesta-mk8",
-modelId:"fiesta",
-name:"Fiesta Mk8",
-years:"2017-2023"
-},
-
-{
-id:"w204",
-modelId:"c-serisi",
-name:"C Serisi W204",
-years:"2007-2014"
-},
-
-{
-id:"w205",
-modelId:"c-serisi",
-name:"C Serisi W205",
-years:"2014-2021"
-},
-
-{
-id:"w212",
-modelId:"e-serisi",
-name:"E Serisi W212",
-years:"2009-2016"
-},
-
-{
-id:"e170",
-modelId:"corolla",
-name:"Corolla E170",
-years:"2013-2019"
-},
-
-{
-id:"e210",
-modelId:"corolla",
-name:"Corolla E210",
-years:"2019-"
-},
-
-{
-id:"xp130",
-modelId:"yaris",
-name:"Yaris XP130",
-years:"2011-2020"
-},
-
-{
-id:"t9",
-modelId:"308",
-name:"308 T9",
-years:"2013-2021"
-},
-
-{
-id:"a9",
-modelId:"208",
-name:"208 A9",
-years:"2012-2019"
-},
-
-{
-id:"astra-j",
-modelId:"astra",
-name:"Astra J",
-years:"2009-2015"
-},
-
-{
-id:"corsa-e",
-modelId:"corsa",
-name:"Corsa E",
-years:"2014-2019"
-},
-
-{
-id:"i20-pb",
-modelId:"i20",
-name:"i20 PB",
-years:"2014-2020"
-},
-
-{
-id:"i30-pd",
-modelId:"i30",
-name:"i30 PD",
-years:"2016-2023"
-},
-
-{
-id:"egea-1",
-modelId:"egea",
-name:"Egea (1. Nesil)",
-years:"2015-"
-},
-
-{
-id:"doblo-3",
-modelId:"doblo",
-name:"Doblo (3. Nesil)",
-years:"2010-"
-},
-
-{
-id:"t-roc-1",
-modelId:"t-roc",
-name:"T-Roc (1. Nesil)",
-years:"2017-"
-},
-
-{
-id:"q3-2",
-modelId:"q3",
-name:"Q3 (2. Nesil)",
-years:"2018-"
-},
-
-{
-id:"f48",
-modelId:"x1",
-name:"X1 F48",
-years:"2015-2022"
-},
-
-{
-id:"captur-1",
-modelId:"captur",
-name:"Captur (1. Nesil)",
-years:"2013-2019"
-},
-
-{
-id:"kuga-3",
-modelId:"kuga",
-name:"Kuga (3. Nesil)",
-years:"2019-"
-},
-
-{
-id:"h247",
-modelId:"gla",
-name:"GLA H247",
-years:"2020-"
-},
-
-{
-id:"c-hr-1",
-modelId:"c-hr",
-name:"C-HR (1. Nesil)",
-years:"2016-2023"
-},
-
-{
-id:"2008-2",
-modelId:"2008",
-name:"2008 (2. Nesil)",
-years:"2019-"
-},
-
-{
-id:"mokka-1",
-modelId:"mokka",
-name:"Mokka (1. Nesil)",
-years:"2012-2019"
-},
-
-{
-id:"tl",
-modelId:"tucson",
-name:"Tucson TL",
-years:"2015-2020"
-},
-
-{
-id:"500x-1",
-modelId:"500x",
-name:"500X (1. Nesil)",
-years:"2015-"
-}
+{ id:"golf-5", modelId:"golf", name:"Golf V", years:"2003-2008" },
+{ id:"golf-6", modelId:"golf", name:"Golf VI", years:"2008-2012" },
+{ id:"golf-7", modelId:"golf", name:"Golf VII", years:"2012-2020" },
+{ id:"golf-8", modelId:"golf", name:"Golf VIII", years:"2020-" },
+{ id:"a3-8v", modelId:"a3", name:"A3 8V", years:"2012-2020" },
+{ id:"a4-b8", modelId:"a4", name:"A4 B8", years:"2008-2015" },
+{ id:"a4-b9", modelId:"a4", name:"A4 B9", years:"2015-" },
+{ id:"f30", modelId:"3-serisi", name:"3 Serisi F30", years:"2012-2019" },
+{ id:"f10", modelId:"5-serisi", name:"5 Serisi F10", years:"2010-2017" },
+{ id:"clio-4", modelId:"clio", name:"Clio IV", years:"2012-2019" },
+{ id:"clio-5", modelId:"clio", name:"Clio V", years:"2019-" },
+{ id:"megane-3", modelId:"megane", name:"Megane III", years:"2008-2016" },
+{ id:"megane-4", modelId:"megane", name:"Megane IV", years:"2016-2022" },
+{ id:"focus-mk3", modelId:"focus", name:"Focus Mk3", years:"2011-2018" },
+{ id:"focus-mk4", modelId:"focus", name:"Focus Mk4", years:"2018-" },
+{ id:"fiesta-mk7", modelId:"fiesta", name:"Fiesta Mk7", years:"2008-2017" },
+{ id:"fiesta-mk8", modelId:"fiesta", name:"Fiesta Mk8", years:"2017-2023" },
+{ id:"w204", modelId:"c-serisi", name:"C Serisi W204", years:"2007-2014" },
+{ id:"w205", modelId:"c-serisi", name:"C Serisi W205", years:"2014-2021" },
+{ id:"w212", modelId:"e-serisi", name:"E Serisi W212", years:"2009-2016" },
+{ id:"e170", modelId:"corolla", name:"Corolla E170", years:"2013-2019" },
+{ id:"e210", modelId:"corolla", name:"Corolla E210", years:"2019-" },
+{ id:"xp130", modelId:"yaris", name:"Yaris XP130", years:"2011-2020" },
+{ id:"t9", modelId:"308", name:"308 T9", years:"2013-2021" },
+{ id:"a9", modelId:"208", name:"208 A9", years:"2012-2019" },
+{ id:"astra-j", modelId:"astra", name:"Astra J", years:"2009-2015" },
+{ id:"corsa-e", modelId:"corsa", name:"Corsa E", years:"2014-2019" },
+{ id:"i20-pb", modelId:"i20", name:"i20 PB", years:"2014-2020" },
+{ id:"i30-pd", modelId:"i30", name:"i30 PD", years:"2016-2023" },
+{ id:"egea-1", modelId:"egea", name:"Egea (1. Nesil)", years:"2015-" },
+{ id:"doblo-3", modelId:"doblo", name:"Doblo (3. Nesil)", years:"2010-" },
+{ id:"t-roc-1", modelId:"t-roc", name:"T-Roc (1. Nesil)", years:"2017-" },
+{ id:"q3-2", modelId:"q3", name:"Q3 (2. Nesil)", years:"2018-" },
+{ id:"f48", modelId:"x1", name:"X1 F48", years:"2015-2022" },
+{ id:"captur-1", modelId:"captur", name:"Captur (1. Nesil)", years:"2013-2019" },
+{ id:"kuga-3", modelId:"kuga", name:"Kuga (3. Nesil)", years:"2019-" },
+{ id:"h247", modelId:"gla", name:"GLA H247", years:"2020-" },
+{ id:"c-hr-1", modelId:"c-hr", name:"C-HR (1. Nesil)", years:"2016-2023" },
+{ id:"2008-2", modelId:"2008", name:"2008 (2. Nesil)", years:"2019-" },
+{ id:"mokka-1", modelId:"mokka", name:"Mokka (1. Nesil)", years:"2012-2019" },
+{ id:"tl", modelId:"tucson", name:"Tucson TL", years:"2015-2020" },
+{ id:"500x-1", modelId:"500x", name:"500X (1. Nesil)", years:"2015-" },
+{ id:"jetta-a6", modelId:"jetta", name:"Jetta A6", years:"2011-2018" },
+{ id:"a6-c7", modelId:"a6", name:"A6 C7", years:"2011-2018" },
+{ id:"f20", modelId:"1-serisi", name:"1 Serisi F20", years:"2011-2019" },
+{ id:"fluence-1", modelId:"fluence", name:"Fluence (1. Nesil)", years:"2009-2020" },
+{ id:"mondeo-mk5", modelId:"mondeo", name:"Mondeo Mk5", years:"2014-2022" },
+{ id:"w177", modelId:"a-serisi", name:"A Serisi W177", years:"2018-" },
+{ id:"avensis-t27", modelId:"avensis", name:"Avensis T27", years:"2009-2018" },
+{ id:"508-1", modelId:"508", name:"508 (1. Nesil)", years:"2010-2018" },
+{ id:"insignia-a", modelId:"insignia", name:"Insignia A", years:"2008-2017" },
+{ id:"elantra-ad", modelId:"elantra", name:"Elantra AD", years:"2015-2020" },
+{ id:"linea-1", modelId:"linea", name:"Linea (1. Nesil)", years:"2007-2018" }
 
 ];
